@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CentraSAL</title>
+<style>
+:root{--bg:#000;--bg2:#0b0b0d;--line:rgba(255,255,255,.1);--tx:#f5f5f7;--mut:#86868b;--blue:#0a9dff;--cyan:#5ee7ff;--green:#3ed02b;--red:#ee4116;--amber:#ffc531;
+--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.5}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+nav{position:fixed;inset:0 0 auto;z-index:20;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - 1080px)/2));padding-top:env(safe-area-inset-top,0px);height:calc(52px + env(safe-area-inset-top,0px));background:rgba(0,0,0,.65);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em}
+.brand svg{width:24px;height:24px}
+nav ul{display:flex;gap:28px;list-style:none;padding:0;font-size:13px;color:#d2d2d7}
+nav ul a{transition:color .2s}nav ul a:hover{color:#fff}
+@media(max-width:560px){nav ul{gap:16px}}
+section{padding:140px 22px;position:relative}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2{letter-spacing:-.035em;line-height:1.04;font-weight:700}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:120px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:900px;height:900px;left:50%;top:38%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(10,157,255,.22),rgba(10,157,255,0) 62%);animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.55;transform:translate(-50%,-50%) scale(1.12)}}
+.logo{width:132px;height:132px;position:relative;filter:drop-shadow(0 0 40px rgba(10,157,255,.45))}
+.logo .o{stroke-dasharray:170;stroke-dashoffset:170;animation:draw 1.8s .2s cubic-bezier(.65,0,.2,1) forwards}
+.logo .i{stroke-dasharray:95;stroke-dashoffset:95;animation:draw 1.6s .8s cubic-bezier(.65,0,.2,1) forwards;transform-origin:32px 32px;transform:rotate(180deg)}
+.logo .d{opacity:0;transform-origin:32px 32px;animation:pop .7s 1.7s cubic-bezier(.3,1.6,.5,1) forwards}
+.logo .spin{transform-origin:32px 32px;animation:spin 22s linear 2.4s infinite}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(46px,9vw,104px);margin-top:44px;opacity:0;animation:up 1s 2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero p{font-size:clamp(18px,2.4vw,24px);color:var(--mut);max-width:640px;margin-top:22px;opacity:0;animation:up 1s 2.25s cubic-bezier(.2,.7,.2,1) forwards}
+.cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;justify-content:center;opacity:0;animation:up 1s 2.5s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:980px;font-size:16px;font-weight:500;transition:transform .25s,background .25s,box-shadow .25s}
+.btn.p{background:var(--blue);color:#fff}.btn.p:hover{background:#2cb0ff;transform:scale(1.04);box-shadow:0 8px 40px rgba(10,157,255,.45)}
+.btn.s{border:1px solid rgba(255,255,255,.28);color:#fff}.btn.s:hover{background:rgba(255,255,255,.1)}
+.sub{color:var(--mut);font-size:clamp(18px,2.2vw,22px);max-width:620px;margin-top:20px}
+h2{font-size:clamp(36px,6vw,68px)}
+.center{text-align:center}.center .sub{margin-inline:auto}
+/* product */
+#urunler{background:var(--bg2);padding-bottom:60px}
+.pname{display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap}
+.stage{perspective:1600px;margin-top:70px;padding-bottom:40px}
+.app{display:grid;grid-template-columns:200px 1fr;max-width:1000px;margin:0 auto;border-radius:18px;overflow:hidden;background:#f3f4f8;color:#1f2933;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 60px 140px rgba(10,157,255,.25);transform-origin:50% 0;will-change:transform;font-size:13px}
+.side{background:#1e252d;color:#e8edf2;padding:26px 12px;min-height:440px}
+.side b{display:block;text-align:center;color:#00a8ff;font-size:19px;margin-bottom:2px}
+.side small{display:block;text-align:center;color:#6f7d8a;font-size:10px;margin-bottom:26px}
+.side div.m{padding:10px 12px;border-radius:8px;margin-bottom:4px;color:#b9c4cf;font-size:12px}
+.side div.on{background:#00a8ff;color:#fff;font-weight:600}
+.main{padding:22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:#fff;border-radius:10px;padding:12px 14px;border-left:4px solid}
+.card small{font-size:9px;font-weight:700;color:#6b7785;letter-spacing:.04em}
+.card strong{display:block;font-size:19px;margin-top:2px;white-space:nowrap}
+.tbl{background:#fff;border-radius:10px;margin-top:14px;overflow:hidden}
+.row{display:grid;grid-template-columns:1.4fr .5fr 1.6fr .9fr;padding:10px 14px;border-bottom:1px solid #eef0f3;align-items:center;font-size:11px}
+.row.h{font-weight:700;border-bottom:2px solid #e3e6ea}
+.row:not(.h){opacity:0;transform:translateY(-10px);transition:opacity .5s,transform .5s}
+.live .row:not(.h){opacity:1;transform:none}
+.row .g{color:var(--green);font-weight:700}.row .a{text-align:right}
+@media(max-width:760px){.app{grid-template-columns:1fr}.side{display:none}.row{grid-template-columns:1.6fr 1fr}.row span:nth-child(1),.row span:nth-child(2){display:none}.cards{grid-template-columns:1fr}}
+.dl{margin-top:70px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.dl small{color:var(--mut);font-size:13px}
+/* features */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:80px}
+.tile{background:linear-gradient(160deg,#141417,#08080a);border:1px solid var(--line);border-radius:28px;padding:36px;overflow:hidden;position:relative;min-height:320px;transition:border-color .4s}
+.tile:hover{border-color:rgba(10,157,255,.5)}
+.tile:nth-child(1){grid-column:span 4}.tile:nth-child(2){grid-column:span 2}.tile:nth-child(3){grid-column:span 2}.tile:nth-child(4){grid-column:span 4}
+.tile h3{font-size:28px;letter-spacing:-.025em;line-height:1.1;max-width:340px}
+.tile p{color:var(--mut);margin-top:12px;max-width:380px;font-size:16px}
+@media(max-width:820px){.tile:nth-child(n){grid-column:span 6}}
+.viz{position:absolute;right:34px;bottom:30px;display:flex;align-items:flex-end;gap:10px}
+.bar{width:26px;border-radius:8px 8px 4px 4px;background:linear-gradient(var(--cyan),var(--blue));height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.in .bar{height:var(--h)}
+.stock{position:absolute;left:36px;right:36px;bottom:30px}
+.srow{display:flex;justify-content:space-between;font-size:13px;color:#c7c7cc;margin-top:12px}
+.track{height:8px;background:#222;border-radius:9px;margin-top:6px;overflow:hidden}
+.fill{height:100%;width:0;border-radius:9px;background:var(--blue);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.in .fill{width:var(--w)}.fill.low{background:var(--red)}
+.pos{position:absolute;left:36px;bottom:30px;font-size:34px;font-weight:700;letter-spacing:-.03em;color:var(--green)}
+.pos small{display:block;font-size:13px;font-weight:400;color:var(--mut);letter-spacing:0}
+.csv{position:absolute;right:34px;bottom:34px;background:var(--blue);padding:10px 18px;border-radius:10px;font-size:14px;font-weight:600}
+/* contact */
+#iletisim{text-align:center;padding-bottom:100px}
+.mail{display:inline-block;margin-top:34px;font-size:clamp(22px,4.6vw,48px);font-weight:600;letter-spacing:-.03em;background:linear-gradient(90deg,#fff,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;border-bottom:2px solid rgba(10,157,255,.4);padding-bottom:6px;transition:border-color .3s}
+.mail:hover{border-color:var(--cyan)}
+footer{border-top:1px solid var(--line);padding:26px 22px;text-align:center;color:var(--mut);font-size:12px}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}.hero h1,.hero p,.cta{opacity:1}.logo .o,.logo .i{stroke-dashoffset:0}.logo .d{opacity:1}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ee7ff"/><stop offset="1" stop-color="#0a7dff"/></linearGradient></defs></svg>
+
+<nav>
+  <a class="brand" href="#top" aria-label="CentraSAL">
+    <svg viewBox="0 0 64 64" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"><path d="M51.9 15.3A26 26 0 1 0 51.9 48.7"/><path d="M43.5 22.4A15 15 0 1 0 43.5 41.6" transform="rotate(180 32 32)"/><circle cx="32" cy="32" r="3.5" fill="url(#g)" stroke="none"/></svg>
+    CentraSAL
+  </a>
+  <ul><li><a href="#urunler">Ürünler</a></li><li><a href="#ozellikler">Özellikler</a></li><li><a href="#iletisim">İletişim</a></li></ul>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="logo" viewBox="0 0 64 64" fill="none" stroke="url(#g)" stroke-width="3.2" stroke-linecap="round" role="img" aria-label="CentraSAL logosu">
+    <g class="spin">
+      <path class="o" d="M51.9 15.3A26 26 0 1 0 51.9 48.7"/>
+      <path class="i" d="M43.5 22.4A15 15 0 1 0 43.5 41.6"/>
+    </g>
+    <circle class="d" cx="32" cy="32" r="4.2" fill="url(#g)" stroke="none"/>
+  </svg>
+  <h1>İşinizin merkezi.</h1>
+  <p>CentraSAL, işletmelerin parasını, stoğunu ve rakamlarını tek yerde toplayan yazılımlar geliştirir.</p>
+  <div class="cta"><a class="btn p" href="#urunler">WorkSAL’ı keşfet</a><a class="btn s" href="#iletisim">İletişime geç</a></div>
+</header>
+
+<section id="urunler">
+  <div class="wrap center rv">
+    <div class="pname"><h2>WorkSAL</h2></div>
+    <p class="sub">Gelir, gider, satış ve stok. İşletmenizin ön muhasebesi tek pencerede.</p>
+  </div>
+  <div class="stage">
+    <div class="app" id="app" aria-label="WorkSAL arayüzü">
+      <div class="side"><b>WorkSAL</b><small>Ön Muhasebe</small>
+        <div class="m on">Gelir &amp; Gider</div><div class="m">Hızlı Satış (POS)</div><div class="m">Stok &amp; Kritik Uyarı</div><div class="m">Grafik &amp; Raporlar</div></div>
+      <div class="main">
+        <div class="cards">
+          <div class="card" style="border-color:#3ed02b"><small>TOPLAM GELİR</small><strong style="color:#3ed02b" data-n="100000">0,00 TL</strong></div>
+          <div class="card" style="border-color:#ee4116"><small>TOPLAM GİDER</small><strong style="color:#ee4116">0,00 TL</strong></div>
+          <div class="card" style="border-color:#ffc531"><small>NET KASA</small><strong style="color:#ffc531" data-n="100000">0,00 TL</strong></div>
+        </div>
+        <div class="tbl" id="tbl">
+          <div class="row h"><span>Tarih</span><span>Tür</span><span>Açıklama</span><span class="a">Tutar</span></div>
+          <div class="row" style="transition-delay:.0s"><span>19.10.2026 16:10:20</span><span class="g">Gelir</span><span>Satış: 2 adet mouse</span><span class="a">4.000,00 TL</span></div>
+          <div class="row" style="transition-delay:.15s"><span>19.10.2026 16:10:09</span><span class="g">Gelir</span><span>Satış: 20 adet mouse</span><span class="a">40.000,00 TL</span></div>
+          <div class="row" style="transition-delay:.3s"><span>19.10.2026 16:09:59</span><span class="g">Gelir</span><span>Satış: 25 adet mouse</span><span class="a">50.000,00 TL</span></div>
+          <div class="row" style="transition-delay:.45s"><span>19.10.2026 16:09:56</span><span class="g">Gelir</span><span>Satış: 1 adet mouse</span><span class="a">2.000,00 TL</span></div>
+          <div class="row" style="transition-delay:.6s"><span>19.10.2026 16:09:43</span><span class="g">Gelir</span><span>Satış: 1 adet mouse</span><span class="a">2.000,00 TL</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dl rv">
+    <a class="btn p" id="dlbtn" href="#" download>WorkSAL’ı indir</a>
+    <small>Ücretsiz indirin, hemen kullanmaya başlayın.</small>
+  </div>
+</section>
+
+<section id="ozellikler">
+  <div class="wrap">
+    <div class="center rv"><h2>Defteri kapatın.<br>Ekranı açın.</h2><p class="sub">Her gün yaptığınız işleri hızlandıran dört temel araç.</p></div>
+    <div class="bento">
+      <div class="tile rv"><h3>Gelir ve giderinizi anında görün.</h3><p>Her işlemi saniyeler içinde kaydedin. Net kasanız her zaman güncel.</p>
+        <div class="viz"><i class="bar" style="--h:70px"></i><i class="bar" style="--h:110px"></i><i class="bar" style="--h:90px"></i><i class="bar" style="--h:150px"></i><i class="bar" style="--h:130px"></i><i class="bar" style="--h:190px"></i></div></div>
+      <div class="tile rv"><h3>Hızlı satış.</h3><p>Ürünü seçin, adedi girin, satışı tamamlayın.</p><div class="pos">4.000,00 TL<small>2 adet mouse</small></div></div>
+      <div class="tile rv"><h3>Stok bitmeden haberiniz olsun.</h3><p>Kritik seviyeye inen ürünler uyarı verir.</p>
+        <div class="stock"><div class="srow"><span>Mouse</span><span>3 adet</span></div><div class="track"><div class="fill low" style="--w:12%"></div></div><div class="srow"><span>Klavye</span><span>84 adet</span></div><div class="track"><div class="fill" style="--w:78%"></div></div></div></div>
+      <div class="tile rv"><h3>Grafikler, raporlar ve Excel’e aktarım.</h3><p>Verilerinizi tek tıkla CSV olarak dışa aktarın, muhasebecinizle paylaşın.</p><div class="csv">Excel’e Aktar (CSV)</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="iletisim">
+  <div class="wrap rv"><h2>Birlikte konuşalım.</h2><p class="sub" style="margin-inline:auto">Soru, öneri ya da iş birliği için bize yazın.</p>
+    <a class="mail" href="mailto:iletisim@centrasal.com">iletisim@centrasal.com</a></div>
+</section>
+<footer>© 2026 CentraSAL. Tüm hakları saklıdır.</footer>
+
+<script>
+(function(){
+  // WorkSAL indirme bağlantısı: aşağıdaki adresi kendi bağlantınızla değiştirin.
+  var DOWNLOAD_URL="#";
+  var b=document.getElementById("dlbtn");b.href=DOWNLOAD_URL;
+  if(DOWNLOAD_URL==="#")b.removeAttribute("download");
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.25});
+  document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+
+  function fmt(n){return n.toLocaleString("tr-TR",{minimumFractionDigits:2,maximumFractionDigits:2})+" TL"}
+  var tbl=document.getElementById("tbl"),done=false;
+  new IntersectionObserver(function(es,o){if(es[0].isIntersecting&&!done){done=true;tbl.classList.add("live");o.disconnect();
+    document.querySelectorAll("[data-n]").forEach(function(el){var t=+el.dataset.n,s=performance.now();
+      (function f(now){var p=Math.min((now-s)/1600,1),e=1-Math.pow(1-p,4);el.textContent=fmt(t*e);if(p<1)requestAnimationFrame(f)})(s)})}},{threshold:.35}).observe(document.getElementById("app"));
+
+  var app=document.getElementById("app"),stage=app.parentNode,reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  function tick(){var r=stage.getBoundingClientRect(),h=innerHeight,p=Math.min(Math.max(1-(r.top-h*.15)/(h*.8),0),1);
+    app.style.transform="rotateX("+(14*(1-p))+"deg) scale("+(.84+.16*p)+")"}
+  if(!reduce){addEventListener("scroll",function(){requestAnimationFrame(tick)},{passive:true});tick()}
+})();
+</script>
+</body>
+</html>
