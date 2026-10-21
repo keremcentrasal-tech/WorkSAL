@@ -3,12 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CentraSAL | İşletmeler için yazılım – WorkSAL ön muhasebe</title>
-<meta name="description" content="CentraSAL, işletmelerin gelir, gider, satış ve stok takibini tek yerde toplayan yazılımlar geliştirir. WorkSAL demo sürümünü hemen indirin.">
+<title>CentraSAL | İşletmeler için sade ve yerel yazılımlar geliştiren girişim</title>
+<meta name="description" content="CentraSAL, küçük işletmeler için sade, çevrimdışı çalışan yazılımlar geliştiren genç bir girişimdir. İlk ürünümüz WorkSAL demo sürümüyle yayında.">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website"><meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="CentraSAL – İşinizin merkezi"><meta property="og:description" content="WorkSAL: gelir, gider, hızlı satış ve stok takibi tek pencerede.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="centrasal-logo-2048-siyah.png" type="image/png">
+<link rel="canonical" href="https://www.centrasal.com/">
+<meta property="og:url" content="https://www.centrasal.com/"><meta property="og:site_name" content="CentraSAL"><meta name="twitter:card" content="summary">
 <link rel="apple-touch-icon" href="centrasal-logo-2048-siyah.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CentraSAL","email":"iletisim@centrasal.com","logo":"centrasal-logo-2048-siyah.png"}</script>
 <style>
@@ -132,19 +135,52 @@ footer{border-top:1px solid var(--line);padding:40px 22px;text-align:center;colo
 .facts li::before{content:"✓";color:var(--green);margin-right:7px;font-weight:700}
 .note{max-width:560px;text-align:center;color:var(--mut);font-size:13px}
 footer .fl{display:flex;gap:22px;justify-content:center;margin-bottom:15px;flex-wrap:wrap}footer .fl a:hover{color:#fff}
+
+.dd{position:relative}.dd>button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0;transition:color .2s}.dd>button:hover,.dd.open>button{color:#fff}
+.dd>button::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 3px 7px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg);transition:transform .25s}.dd.open>button::after{transform:rotate(-135deg) translate(-2px,-2px)}
+.menu{position:absolute;top:calc(100% + 14px);left:50%;min-width:130px;padding:6px;background:rgba(22,22,26,.97);border:1px solid var(--line);border-radius:12px;opacity:0;visibility:hidden;transform:translate(-50%,-6px);transition:opacity .2s,transform .2s,visibility .2s}
+.dd.open .menu{opacity:1;visibility:visible;transform:translate(-50%,0)}.menu a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;color:#fff}.menu a:hover{background:rgba(10,157,255,.18)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--blue);color:#fff;padding:8px 14px;border-radius:8px;z-index:30}.skip:focus{left:8px}
+.badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--amber);border:1px solid rgba(255,197,49,.4);background:rgba(255,197,49,.08);padding:4px 12px;border-radius:980px;margin-bottom:18px}
+section.s{padding:110px 22px}.lead{color:var(--mut);font-size:clamp(17px,2vw,20px);max-width:760px;margin:22px auto 0;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}.cards .tile:nth-child(n){grid-column:auto;min-height:0;padding:30px}.cards .tile h3{font-size:22px}
+.cards .tile .n{color:var(--cyan);font-weight:700;font-size:13px;letter-spacing:.08em;margin-bottom:14px;display:block}
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}.vm .tile:nth-child(n){grid-column:auto;min-height:0}.vm h3{font-size:26px;max-width:none}
+.pcard{max-width:760px;margin:56px auto 0;text-align:center}.pcard:nth-child(n){grid-column:auto}.pcard h3{max-width:none;margin:0 auto}.pcard p{margin-inline:auto;max-width:520px}.pcard .btn{margin-top:26px}
+@media(max-width:760px){.cards,.vm{grid-template-columns:1fr}section.s{padding:80px 22px}}
+
+/* ---- Profesyonel dokunuşlar ---- */
+#pb{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,var(--cyan),var(--blue));z-index:40;pointer-events:none}
+body{animation:pgin .7s cubic-bezier(.2,.7,.2,1)}@keyframes pgin{from{opacity:0;transform:translateY(8px)}}
+body.leaving{opacity:0;transform:translateY(-6px);transition:opacity .28s ease,transform .28s ease}
+nav{transition:background .3s,border-color .3s}nav.sc{background:rgba(0,0,0,.88);border-bottom:1px solid var(--line)}
+nav ul>li>a:not(.navcta),.dd>button{position:relative}
+nav ul>li>a:not(.navcta)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--cyan);transform:scaleX(0);transition:transform .3s}
+nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)}nav ul a.act{color:#fff}
+.navcta{transition:transform .25s,box-shadow .25s}.navcta:hover{transform:scale(1.06);box-shadow:0 4px 22px rgba(10,157,255,.5)}
+.btn{position:relative;overflow:hidden}.btn:active{transform:scale(.97)}
+.btn.p::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s}.btn.p:hover::after{transform:translateX(120%)}
+.hero{position:relative}
+.cue{position:absolute;bottom:28px;left:50%;width:26px;height:42px;margin-left:-13px;border:1.5px solid rgba(255,255,255,.35);border-radius:14px;opacity:0;animation:up 1s 3.4s forwards}
+.cue::after{content:"";position:absolute;left:50%;top:8px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:var(--cyan);animation:cue 1.8s infinite}@keyframes cue{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+.tile::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(10,157,255,.16),transparent 60%)}.tile:hover::after{opacity:1}
+#up{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(20,20,24,.85);backdrop-filter:blur(12px);color:#fff;font-size:18px;cursor:pointer;z-index:25;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,visibility .3s,background .25s}
+#up.on{opacity:1;visibility:visible;transform:none}#up:hover{background:var(--blue)}
+::selection{background:rgba(10,157,255,.45)}
+@media(prefers-reduced-motion:reduce){body{animation:none}.cue{animation:none;opacity:1}.cue::after{animation:none}}
 </style>
 </head>
 <body>
-<a class="skip" href="#urunler">İçeriğe geç</a>
+<div id="pb"></div>
+<a class="skip" href="#hakkimizda">İçeriğe geç</a>
 <svg width="0" height="0" style="position:absolute"><defs>
 <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ee7ff"/><stop offset="1" stop-color="#0a7dff"/></linearGradient></defs></svg>
-
 <nav>
   <a class="brand" href="#top" aria-label="CentraSAL">
     <svg viewBox="0 0 64 64" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"><path d="M51.9 15.3A26 26 0 1 0 51.9 48.7"/><path d="M43.5 22.4A15 15 0 1 0 43.5 41.6" transform="rotate(180 32 32)"/><circle cx="32" cy="32" r="3.5" fill="url(#g)" stroke="none"/></svg>
     CentraSAL
   </a>
-  <ul><li><a href="#urunler">Ürünler</a></li><li><a href="#ozellikler">Özellikler</a></li><li><a href="#iletisim">İletişim</a></li><li><a class="navcta" href="#indir">İndir</a></li></ul>
+  <ul><li><a href="#hakkimizda">Hakkımızda</a></li><li><a href="#vizyon">Vizyon</a></li><li class="dd" id="dd"><button type="button" aria-expanded="false" aria-controls="ddm" id="ddb">Ürünler</button><div class="menu" id="ddm"><a href="worksal.html">WorkSAL</a></div></li><li><a href="#iletisim">İletişim</a></li></ul>
 </nav>
 
 <header class="hero" id="top">
@@ -156,80 +192,45 @@ footer .fl{display:flex;gap:22px;justify-content:center;margin-bottom:15px;flex-
     <circle class="d" cx="32" cy="32" r="4.2" fill="url(#g)" stroke="none"/>
   </svg>
   <h1>İşinizin merkezi.</h1>
-  <p>CentraSAL, işletmelerin parasını, stoğunu ve rakamlarını tek yerde toplayan yazılımlar geliştirir.</p>
-  <div class="cta"><a class="btn p" href="#urunler">WorkSAL’ı keşfet</a><a class="btn s" href="#indir">Demo’yu indir</a><a class="btn s" href="#iletisim">İletişime geç</a></div>
+  <p>CentraSAL, işletmelerin parasını, stoğunu ve rakamlarını tek yerde toplayan yazılımlar geliştiren, yolun başındaki bir yazılım girişimidir.</p>
+  <div class="cta"><a class="btn p" href="#hakkimizda">Bizi tanıyın</a><a class="btn s" href="worksal.html">WorkSAL’ı keşfet</a><a class="btn s" href="#iletisim">İletişime geç</a></div>
+  <a class="cue" href="#hakkimizda" aria-label="Aşağı kaydır"></a>
 </header>
 
-<section id="urunler">
-  <div class="wrap center rv">
-    <span class="badge">DEMO SÜRÜM</span><div class="pname"><h2>WorkSAL</h2></div>
-    <p class="sub">Gelir, gider, satış ve stok. İşletmenizin ön muhasebesi tek pencerede.</p>
+<section class="s" id="hakkimizda"><div class="wrap">
+  <div class="center rv"><span class="badge">YOLUN BAŞINDAYIZ</span><h2>Biz kimiz?</h2>
+  <p class="lead">CentraSAL, küçük ve orta ölçekli işletmelerin günlük işlerini sadeleştirmeyi hedefleyen genç bir yazılım girişimidir. Karmaşık, pahalı ve internete bağımlı programların yerine; anlaşılır, hızlı ve verilerinizin sizde kaldığı çözümler üretmek için yola çıktık.</p>
+  <p class="lead">Henüz gelişme aşamasındayız ve bunu saklamıyoruz. Ürünlerimizi masa başında değil, kullanıcılarımızla birlikte, her sürümde biraz daha iyileştirerek büyütüyoruz.</p></div>
+  <div class="cards">
+    <div class="tile rv"><span class="n">01</span><h3>Sade ve hızlı.</h3><p>Kısa sürede öğrenilen, gün içinde yorulmadan kullanılan arayüzler tasarlıyoruz.</p></div>
+    <div class="tile rv"><span class="n">02</span><h3>Verileriniz sizde.</h3><p>Uygulamalarımız çevrimdışı çalışır; verileriniz kendi bilgisayarınızda kalır.</p></div>
+    <div class="tile rv"><span class="n">03</span><h3>Birlikte geliştiririz.</h3><p>Geri bildirimleriniz yol haritamızı belirler. Her öneri okunur, değerlendirilir.</p></div>
   </div>
-  <div class="stage">
-    <div class="app" id="app" aria-label="WorkSAL arayüzü">
-      <div class="side"><b>WorkSAL</b><small>Ön Muhasebe</small>
-        <button class="m on" data-t="0">Gelir &amp; Gider</button><button class="m" data-t="1">Hızlı Satış (POS)</button><button class="m" data-t="2">Stok &amp; Kritik Uyarı</button><button class="m" data-t="3">Grafik &amp; Raporlar</button></div>
-      <div class="main">
-        <div class="pnl on" data-p="0">
-          <div class="cards">
-            <div class="card" style="border-color:#3ed02b"><small>TOPLAM GELİR</small><strong style="color:#3ed02b" data-n="186750">0,00 TL</strong></div>
-            <div class="card" style="border-color:#ee4116"><small>TOPLAM GİDER</small><strong style="color:#ee4116" data-n="61340">0,00 TL</strong></div>
-            <div class="card" style="border-color:#ffc531"><small>NET KASA</small><strong style="color:#e0a400" data-n="125410">0,00 TL</strong></div>
-          </div>
-          <div class="tbl" id="tbl">
-            <div class="row h"><span>Tarih</span><span>Tür</span><span>Açıklama</span><span class="a">Tutar</span></div>
-            <div class="row" style="transition-delay:0s"><span>19.10.2026 16:42</span><span class="g">Gelir</span><span>Müşteri tahsilatı – Yıldız Ticaret</span><span class="a">48.500,00 TL</span></div>
-            <div class="row" style="transition-delay:.15s"><span>19.10.2026 15:18</span><span class="g">Gelir</span><span>Satış: 4 adet barkod okuyucu</span><span class="a">7.800,00 TL</span></div>
-            <div class="row" style="transition-delay:.3s"><span>19.10.2026 11:05</span><span class="r">Gider</span><span>Elektrik faturası – Ekim</span><span class="a">3.240,00 TL</span></div>
-            <div class="row" style="transition-delay:.45s"><span>18.10.2026 17:30</span><span class="r">Gider</span><span>Tedarikçi ödemesi – Atlas Toptan</span><span class="a">22.400,00 TL</span></div>
-            <div class="row" style="transition-delay:.6s"><span>18.10.2026 14:12</span><span class="g">Gelir</span><span>Satış: 12 adet termal etiket rulosu</span><span class="a">4.200,00 TL</span></div>
-          </div>
-        </div>
-        <div class="pnl" data-p="1"><div class="ph">Hızlı Satış</div>
-          <div class="two"><div class="prods">
-            <div class="prod"><b>Barkod okuyucu</b><span>Stok: 38 adet</span><i>1.950,00 TL</i></div>
-            <div class="prod"><b>Termal etiket rulosu</b><span>Stok: 6 adet</span><i>350,00 TL</i></div>
-            <div class="prod"><b>Fiş yazıcı</b><span>Stok: 22 adet</span><i>4.800,00 TL</i></div>
-            <div class="prod"><b>Toner kartuşu</b><span>Stok: 14 adet</span><i>1.250,00 TL</i></div></div>
-          <div class="box"><div class="line"><span>2 × Barkod okuyucu</span><b>3.900,00 TL</b></div><div class="line"><span>5 × Termal etiket rulosu</span><b>1.750,00 TL</b></div>
-            <div class="tot"><span>Toplam</span><span>5.650,00 TL</span></div><div class="done">Satışı tamamla</div></div></div></div>
-        <div class="pnl" data-p="2"><div class="ph">Stok durumu</div>
-          <div class="warn">2 ürün kritik seviyenin altında: Termal etiket rulosu, Toner kartuşu</div>
-          <div class="tbl"><div class="srw" style="font-weight:700"><span>Ürün</span><span>Doluluk</span><span style="text-align:right">Adet</span></div>
-            <div class="srw"><span>Termal etiket rulosu</span><div class="sb lo"><div style="width:12%"></div></div><b style="text-align:right;color:#ee4116">6</b></div>
-            <div class="srw"><span>Toner kartuşu</span><div class="sb lo"><div style="width:28%"></div></div><b style="text-align:right;color:#ee4116">14</b></div>
-            <div class="srw"><span>Fiş yazıcı</span><div class="sb"><div style="width:55%"></div></div><b style="text-align:right">22</b></div>
-            <div class="srw"><span>Barkod okuyucu</span><div class="sb"><div style="width:84%"></div></div><b style="text-align:right">38</b></div></div></div>
-        <div class="pnl" data-p="3"><div class="ph">Aylık gelir ve gider</div>
-          <div class="box"><div class="chart">
-            <div class="cg"><i class="cb" style="--h:92px"></i><i class="cb x" style="--h:54px"></i></div><div class="cg"><i class="cb" style="--h:110px"></i><i class="cb x" style="--h:61px"></i></div><div class="cg"><i class="cb" style="--h:98px"></i><i class="cb x" style="--h:58px"></i></div>
-            <div class="cg"><i class="cb" style="--h:134px"></i><i class="cb x" style="--h:70px"></i></div><div class="cg"><i class="cb" style="--h:121px"></i><i class="cb x" style="--h:66px"></i></div><div class="cg"><i class="cb" style="--h:187px"></i><i class="cb x" style="--h:61px"></i></div></div>
-            <div class="lab"><span>May</span><span>Haz</span><span>Tem</span><span>Ağu</span><span>Eyl</span><span>Eki</span></div>
-            <div class="leg"><span><i style="background:#3ed02b"></i>Gelir</span><span><i style="background:#ee4116"></i>Gider</span></div></div></div>
-      </div>
-    </div>
-  </div>
-  <p class="hint">Soldaki menüden bölümleri gezebilirsiniz.</p>
-  <div class="dl rv" id="indir">
-    <a class="btn p" id="dlbtn" href="#" download>WorkSAL Demo’yu 30 Gün Ücretsiz Dene</a>
-    <ul class="facts"><li>Ücretsiz demo</li><li>Windows 10 ve 11</li><li>İnternet bağlantısı gerekmez</li></ul>
-    <p class="note">WorkSAL şu an demo aşamasındadır ve aktif olarak geliştirilmektedir. Yeni özellikler düzenli olarak eklenecek; görüş ve önerileriniz bizim için değerli.</p>
-  </div>
-</section>
+</div></section>
 
-<section id="ozellikler">
-  <div class="wrap">
-    <div class="center rv"><h2>Defteri kapatın.<br>Ekranı açın.</h2><p class="sub">Her gün yaptığınız işleri hızlandıran dört temel araç.</p></div>
-    <div class="bento">
-      <div class="tile rv"><h3>Gelir ve giderinizi anında görün.</h3><p>Her işlemi saniyeler içinde kaydedin. Net kasanız her zaman güncel.</p>
-        <div class="viz"><i class="bar" style="--h:70px"></i><i class="bar" style="--h:110px"></i><i class="bar" style="--h:90px"></i><i class="bar" style="--h:150px"></i><i class="bar" style="--h:130px"></i><i class="bar" style="--h:190px"></i></div></div>
-      <div class="tile rv"><h3>Hızlı satış.</h3><p>Ürünü seçin, adedi girin, satışı tamamlayın.</p><div class="pos">5.650,00 TL<small>2 barkod okuyucu, 5 etiket rulosu</small></div></div>
-      <div class="tile rv"><h3>Stok bitmeden haberiniz olsun.</h3><p>Kritik seviyeye inen ürünler uyarı verir.</p>
-        <div class="stock"><div class="srow"><span>Termal etiket rulosu</span><span>6 adet</span></div><div class="track"><div class="fill low" style="--w:12%"></div></div><div class="srow"><span>Barkod okuyucu</span><span>38 adet</span></div><div class="track"><div class="fill" style="--w:84%"></div></div></div></div>
-      <div class="tile rv"><h3>Grafikler, raporlar ve Excel’e aktarım.</h3><p>Verilerinizi tek tıkla CSV olarak dışa aktarın, muhasebecinizle paylaşın.</p><div class="csv">Excel’e Aktar (CSV)</div></div>
-    </div>
+<section class="s" id="vizyon"><div class="wrap">
+  <div class="center rv"><h2>Vizyon ve misyon.</h2></div>
+  <div class="vm">
+    <div class="tile rv"><h3>Vizyonumuz</h3><p>Her ölçekten işletmenin, büyük firmaların araçlarına denk; ama çok daha sade ve ulaşılabilir yazılımlarla işini yönettiği bir gelecek.</p></div>
+    <div class="tile rv"><h3>Misyonumuz</h3><p>İşletme sahiplerinin zamanını rakamlarla uğraşarak değil, işini büyüterek geçirmesi için güvenilir, anlaşılır ve yerli yazılımlar geliştirmek.</p></div>
   </div>
-</section>
+</div></section>
+
+<section class="s" id="yol"><div class="wrap">
+  <div class="center rv"><h2>Neredeyiz, nereye gidiyoruz?</h2></div>
+  <div class="cards">
+    <div class="tile rv"><span class="n">ŞİMDİ</span><h3>İlk ürün yayında.</h3><p>WorkSAL demo sürümü indirilebilir durumda. Kullanıcılardan gelen geri bildirimleri topluyoruz.</p></div>
+    <div class="tile rv"><span class="n">SIRADA</span><h3>WorkSAL gelişiyor.</h3><p>Yeni özellikler ve iyileştirmeler, gelen önerilere göre düzenli olarak eklenecek.</p></div>
+    <div class="tile rv"><span class="n">HEDEF</span><h3>Yeni ürünler.</h3><p>Aynı sadelik anlayışıyla işletmelere yönelik yeni yazılımlar geliştirmek.</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="urunler"><div class="wrap">
+  <div class="center rv"><h2>Ürünlerimiz</h2></div>
+  <div class="tile pcard rv"><span class="badge">DEMO SÜRÜM</span><h3>WorkSAL</h3>
+    <p>Gelir, gider, hızlı satış ve stok takibini tek pencerede toplayan ön muhasebe uygulaması.</p>
+    <a class="btn p" href="worksal.html">WorkSAL’ı incele</a></div>
+</div></section>
 
 <section id="iletisim">
   <div class="wrap rv"><h2>Birlikte konuşalım.</h2><p class="sub" style="margin-inline:auto">Soru, öneri ya da iş birliği için bize yazın.</p>
@@ -251,27 +252,39 @@ footer .fl{display:flex;gap:22px;justify-content:center;margin-bottom:15px;flex-
 
 <script>
 (function(){
-  // WorkSAL indirme bağlantısı: aşağıdaki adresi kendi bağlantınızla değiştirin.
-  var DOWNLOAD_URL="https://github.com/keremcentrasal-tech/WorkSAL/releases/download/v4.0.1/WorkSAL-Setup.exe";
-  var b=document.getElementById("dlbtn");b.href=DOWNLOAD_URL;
-  if(DOWNLOAD_URL==="#")b.removeAttribute("download");
-
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.25});
+  var dd=document.getElementById("dd"),b=document.getElementById("ddb");
+  function set(o){dd.classList.toggle("open",o);b.setAttribute("aria-expanded",o)}
+  b.addEventListener("click",function(e){e.stopPropagation();set(!dd.classList.contains("open"))});
+  document.addEventListener("click",function(e){if(!dd.contains(e.target))set(false)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.2});
   document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
-
-  function fmt(n){return n.toLocaleString("tr-TR",{minimumFractionDigits:2,maximumFractionDigits:2})+" TL"}
-  var tbl=document.getElementById("tbl"),done=false;
-  new IntersectionObserver(function(es,o){if(es[0].isIntersecting&&!done){done=true;tbl.classList.add("live");o.disconnect();
-    document.querySelectorAll("[data-n]").forEach(function(el){var t=+el.dataset.n,s=performance.now();
-      (function f(now){var p=Math.min((now-s)/1600,1),e=1-Math.pow(1-p,4);el.textContent=fmt(t*e);if(p<1)requestAnimationFrame(f)})(s)})}},{threshold:.35}).observe(document.getElementById("app"));
-
-  var tabs=document.querySelectorAll(".side .m"),pn=document.querySelectorAll(".pnl");
-  tabs.forEach(function(t){t.addEventListener("click",function(){tabs.forEach(function(x){x.classList.toggle("on",x===t)});pn.forEach(function(p){p.classList.toggle("on",p.dataset.p===t.dataset.t)})})});
-
-  var app=document.getElementById("app"),stage=app.parentNode,reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
-  function tick(){var r=stage.getBoundingClientRect(),h=innerHeight,p=Math.min(Math.max(1-(r.top-h*.15)/(h*.8),0),1);
-    app.style.transform="rotateX("+(14*(1-p))+"deg) scale("+(.84+.16*p)+")"}
-  if(!reduce){addEventListener("scroll",function(){requestAnimationFrame(tick)},{passive:true});tick()}
+})();
+</script>
+<button id="up" type="button" aria-label="Sayfa başına dön">↑</button>
+<script>
+(function(){
+  var nav=document.querySelector("nav"),pb=document.getElementById("pb"),up=document.getElementById("up"),
+      reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  function onScroll(){var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    pb.style.transform="scaleX("+(h>0?y/h:0)+")";nav.classList.toggle("sc",y>20);up.classList.toggle("on",y>700)}
+  addEventListener("scroll",function(){requestAnimationFrame(onScroll)},{passive:true});onScroll();
+  up.addEventListener("click",function(){scrollTo({top:0,behavior:reduce?"auto":"smooth"})});
+  // kademeli görünme
+  document.querySelectorAll(".cards,.vm,.bento").forEach(function(g){g.querySelectorAll(".rv").forEach(function(el,i){el.style.transitionDelay=(i*90)+"ms"})});
+  // aktif menü
+  var links=[].slice.call(document.querySelectorAll('nav ul a[href^="#"]')).filter(function(a){return !a.classList.contains("navcta")});
+  var map=links.map(function(a){return{a:a,s:document.querySelector(a.getAttribute("href"))}}).filter(function(m){return m.s});
+  var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)map.forEach(function(m){m.a.classList.toggle("act",m.s===e.target)})})},{rootMargin:"-45% 0px -50% 0px"});
+  map.forEach(function(m){spy.observe(m.s)});
+  // ışık efekti
+  document.querySelectorAll(".tile").forEach(function(t){t.addEventListener("pointermove",function(e){var r=t.getBoundingClientRect();t.style.setProperty("--mx",(e.clientX-r.left)+"px");t.style.setProperty("--my",(e.clientY-r.top)+"px")})});
+  // sayfa geçişi
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");
+    if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||a.target||a.hasAttribute("download"))return;
+    var u=new URL(a.href,location.href);if(u.origin!==location.origin||u.pathname===location.pathname||!/\.html$|\/$/.test(u.pathname))return;
+    e.preventDefault();document.body.classList.add("leaving");setTimeout(function(){location.href=u.href},reduce?0:280)});
+  addEventListener("pageshow",function(e){if(e.persisted)document.body.classList.remove("leaving")});
 })();
 </script>
 </body>

@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="centrasal-logo-2048-siyah.png" type="image/png">
+<meta name="theme-color" content="#000000">
 <title>Kullanım Koşulları | CentraSAL</title>
 <style>
 :root{--bg:#000;--line:rgba(255,255,255,.1);--tx:#f5f5f7;--mut:#86868b;--blue:#0a9dff;
@@ -16,6 +19,10 @@ h3{margin-top:30px;color:#fff;}
 p, ul{color:var(--mut);font-size:15px;}
 li{margin-bottom:8px;}
 .warn{background:rgba(238, 65, 22, 0.1); border-left:4px solid #ee4116; padding:12px; border-radius:4px; color:#f5f5f7; margin-top:10px;}
+html{scroll-behavior:smooth}body{animation:pgin .7s cubic-bezier(.2,.7,.2,1)}@keyframes pgin{from{opacity:0;transform:translateY(8px)}}
+body.leaving{opacity:0;transform:translateY(-6px);transition:opacity .28s,transform .28s}
+.back{transition:background .25s,color .25s,border-color .25s}.back:hover{background:rgba(255,255,255,.08);color:#fff;text-decoration:none}
+@media(prefers-reduced-motion:reduce){body{animation:none}}
 </style>
 </head>
 <body>
@@ -42,5 +49,13 @@ li{margin-bottom:8px;}
   <h3>4. Sorumluluk Reddi</h3>
   <p>Yazılım "Olduğu Gibi" (AS IS) sunulmaktadır. CentraSAL, uygulamanın hatasız çalışacağını garanti etmez. WorkSAL resmi bir mali müşavirlik yazılımı değildir. Resmi beyannamelerdeki doğruluk sorumluluğu kullanıcıya aittir.</p>
 </div>
+<script>
+(function(){var r=matchMedia("(prefers-reduced-motion:reduce)").matches;
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");
+if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||a.target)return;var u=new URL(a.href,location.href);
+if(u.origin!==location.origin||u.pathname===location.pathname||!/\.html$|\/$/.test(u.pathname))return;
+e.preventDefault();document.body.classList.add("leaving");setTimeout(function(){location.href=u.href},r?0:280)});
+addEventListener("pageshow",function(e){if(e.persisted)document.body.classList.remove("leaving")})})();
+</script>
 </body>
 </html>
