@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "centrasal.com" }],
+      "destination": "https://centrasal.vercel.app/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.centrasal.com" }],
+      "destination": "https://centrasal.vercel.app/$1",
+      "permanent": true
+    }
+  ]
+}

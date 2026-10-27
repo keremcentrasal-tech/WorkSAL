@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.centrasal.com/sitemap.xml
+Sitemap: https://centrasal.vercel.app/sitemap.xml
