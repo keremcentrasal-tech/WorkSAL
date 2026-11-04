@@ -162,10 +162,70 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
 .faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:300;color:var(--cyan);transition:transform .3s}
 .faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
 .faq p{color:var(--mut);padding:0 0 20px;font-size:16px;animation:pgin .4s}.faq p a{color:var(--blue)}.faq p a:hover{text-decoration:underline}
+
+/* ---- Yeni arayüz örnekleri ---- */
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:#0a6fb8;background:#e3f2ff;border-radius:99px;padding:3px 10px;margin-left:8px;vertical-align:middle}
+.pnote{font-size:11px;color:#6b7785;margin:-6px 0 12px}
+.bt{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.bt .prod{display:flex;gap:10px;align-items:center;border:2px solid #e6e9ee;transition:border-color .3s,background .3s}
+.bt .prod.on{border-color:#0a9dff;background:#eaf5ff}
+.bt svg{width:34px;height:34px;flex-shrink:0;padding:7px;border-radius:9px;background:#e6eefc;color:#17376a;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.c4{grid-template-columns:repeat(4,1fr)}.c4 .card strong{font-size:15px}.c4 .card em{display:block;font-style:normal;font-size:10px;color:#6b7785;margin-top:3px}
+.row.m4{grid-template-columns:1.5fr .6fr 1fr .8fr}
+.bd{display:inline-block;padding:2px 9px;border-radius:99px;font-size:10px;font-weight:700;white-space:nowrap}
+.bd.ok{background:#e6f6ee;color:#1b7f5c}.bd.wt{background:#fff4d6;color:#8a5a00}.bd.no{background:#eef1f6;color:#5f6f88}.bd.lo{background:#fdecea;color:#b4372e}
+.ov{overflow-x:auto}.vg{display:grid;grid-template-columns:1.3fr repeat(5,1fr);min-width:520px;font-size:11px}
+.vg>div{padding:9px 8px;border-bottom:1px solid #eef0f3;text-align:center}.vg>div:nth-child(6n+1){text-align:left}
+.vg .vh{font-weight:700;border-bottom:2px solid #e3e6ea}.vg small{display:block;color:#6b7785;font-weight:400;font-size:10px}
+.vg .iz{color:#8a5a00;background:#fff4d6;border-radius:6px}
+.row.pf{grid-template-columns:1.5fr .6fr 1fr 1fr}
+@media(max-width:760px){.bt{grid-template-columns:1fr 1fr}.c4{grid-template-columns:1fr 1fr}.row.m4,.row.pf{grid-template-columns:1.4fr .6fr 1fr .9fr}.row.m4 span:nth-child(1),.row.m4 span:nth-child(2),.row.pf span:nth-child(1),.row.pf span:nth-child(2){display:block}}
+
+/* ===== Elit katman ===== */
+h1,h2,h3{text-wrap:balance}p,.sub,.lead{text-wrap:pretty}
+body{text-rendering:optimizeLegibility}
+.hero h1{background:linear-gradient(180deg,#fff 35%,#9db4d6);-webkit-background-clip:text;background-clip:text;color:transparent}
+main>section+section::before{content:"";position:absolute;top:0;left:50%;width:min(1080px,86%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(94,231,255,.32),transparent)}
+.tile{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 28px 60px -34px rgba(0,0,0,.9)}
+.btn.s{backdrop-filter:blur(8px)}
+.side .m:focus-visible,.dd>button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.trust{padding:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.trust .facts{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:46px}
+.chips span{padding:10px 18px;border:1px solid var(--line);border-radius:980px;font-size:14px;color:#d2d2d7;background:rgba(255,255,255,.03);transition:border-color .3s,background .3s,transform .3s}
+.chips span:hover{border-color:rgba(10,157,255,.6);background:rgba(10,157,255,.1);transform:translateY(-2px)}
+.steps{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;list-style:none;padding:0;margin:4px 0}
+.steps li{display:flex;align-items:center;gap:10px;font-size:14px;color:#d2d2d7;border:1px solid var(--line);border-radius:980px;padding:7px 16px 7px 7px}
+.steps b{width:24px;height:24px;border-radius:50%;background:var(--blue);display:grid;place-items:center;font-size:12px}
+.tile:nth-child(5),.tile:nth-child(6){grid-column:span 3;min-height:260px}
+.tile .chips{justify-content:flex-start;margin-top:22px;gap:8px}.tile .chips span{padding:6px 12px;font-size:12px}
+@media(max-width:820px){.tile:nth-child(5),.tile:nth-child(6){grid-column:span 6}}
+/* menü (mobil) */
+.burger{display:none;width:40px;height:40px;border:0;background:none;cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:10px;right:10px;height:1.5px;background:#fff;transition:transform .3s,top .3s,background .3s}
+.burger span{top:19px}.burger span::before,.burger span::after{content:"";left:0;right:0}.burger span::before{top:-6px}.burger span::after{top:6px}
+nav.mo .burger span{background:transparent}nav.mo .burger span::before{top:0;transform:rotate(45deg)}nav.mo .burger span::after{top:0;transform:rotate(-45deg)}
+@media(max-width:720px){.burger{display:block}
+ nav ul{position:fixed;top:calc(52px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;gap:0;padding:6px 22px 18px;font-size:16px;background:rgba(0,0,0,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+ nav.mo ul{opacity:1;visibility:visible;transform:none}
+ nav ul li{padding:13px 0;border-bottom:1px solid var(--line)}nav ul li:last-child{border:0}
+ nav ul>li>a::after{display:none}.navcta{display:inline-block}
+ .dd>button::after{display:none}.menu{position:static;opacity:1;visibility:visible;transform:none;background:none;border:0;padding:6px 0 0 14px}}
+/* alt bilgi */
+footer{text-align:left;padding:56px 22px 34px}
+.fg{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:36px}
+.fg h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#d2d2d7;margin-bottom:14px}
+.fg a{display:block;padding:5px 0;transition:color .2s}.fg a:hover{color:#fff}
+.fg p{max-width:280px;margin-top:10px;line-height:1.6}.fg .fb b{color:#fff;letter-spacing:1px;font-size:16px}
+.fc{max-width:1080px;margin:40px auto 0;padding-top:22px;border-top:1px solid var(--line);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media(max-width:760px){.fg{grid-template-columns:1fr 1fr}.fg .fb{grid-column:1/-1}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"WorkSAL","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11","description":"Gelir, gider, hızlı satış ve stok takibini tek pencerede toplayan çevrimdışı ön muhasebe uygulaması (demo sürüm).","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"Organization","name":"CentraSAL"}}</script>
+<meta name="robots" content="index,follow"><meta property="og:image" content="https://centrasal.vercel.app/centrasal-logo-2048-siyah.png"><meta name="twitter:image" content="https://centrasal.vercel.app/centrasal-logo-2048-siyah.png">
 </head>
 <body>
+<noscript><style>.rv,.hero h1,.hero p,.cta,.row:not(.h),.cue{opacity:1!important;transform:none!important}.logo .o,.logo .i{stroke-dashoffset:0!important}.logo .d{opacity:1!important}.fill{width:var(--w)!important}.bar{height:var(--h)!important}</style></noscript>
+
 <div id="pb"></div>
 <a class="skip" href="#urunler">İçeriğe geç</a>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -176,10 +236,12 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
     <svg viewBox="0 0 64 64" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"><path d="M51.9 15.3A26 26 0 1 0 51.9 48.7"/><path d="M43.5 22.4A15 15 0 1 0 43.5 41.6" transform="rotate(180 32 32)"/><circle cx="32" cy="32" r="3.5" fill="url(#g)" stroke="none"/></svg>
     CentraSAL
   </a>
-  <ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="#ozellikler">Özellikler</a></li><li><a href="#sss">SSS</a></li><li><a href="#iletisim">İletişim</a></li><li><a class="navcta" href="#indir">İndir</a></li></ul>
+  <button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlist"><span></span></button>
+  <ul id="navlist"><li><a href="index.html">Ana Sayfa</a></li><li><a href="#ozellikler">Özellikler</a></li><li><a href="#sss">SSS</a></li><li><a href="#iletisim">İletişim</a></li><li><a class="navcta" href="#indir">İndir</a></li></ul>
 </nav>
 
 
+<main id="icerik">
 <section id="urunler">
   <div class="wrap center rv">
     <span class="badge">DEMO SÜRÜM</span><div class="pname"><h2>WorkSAL</h2></div>
@@ -188,7 +250,7 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
   <div class="stage">
     <div class="app" id="app" aria-label="WorkSAL arayüzü">
       <div class="side"><b>WorkSAL</b><small>Ön Muhasebe</small>
-        <button class="m on" data-t="0">Gelir &amp; Gider</button><button class="m" data-t="1">Hızlı Satış (POS)</button><button class="m" data-t="2">Stok &amp; Kritik Uyarı</button><button class="m" data-t="3">Grafik &amp; Raporlar</button></div>
+        <button class="m on" data-t="0">Gelir &amp; Gider</button><button class="m" data-t="1">Hızlı Satış (POS)</button><button class="m" data-t="2">Stok &amp; Kritik Uyarı</button><button class="m" data-t="3">Grafik &amp; Raporlar</button><button class="m" data-t="4">İşletme Türü</button><button class="m" data-t="5">Karlılık Analizi</button><button class="m" data-t="6">Personel &amp; Vardiya</button><button class="m" data-t="7">Randevular</button></div>
       <div class="main">
         <div class="pnl on" data-p="0">
           <div class="cards">
@@ -226,20 +288,25 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
             <div class="cg"><i class="cb" style="--h:134px"></i><i class="cb x" style="--h:70px"></i></div><div class="cg"><i class="cb" style="--h:121px"></i><i class="cb x" style="--h:66px"></i></div><div class="cg"><i class="cb" style="--h:187px"></i><i class="cb x" style="--h:61px"></i></div></div>
             <div class="lab"><span>May</span><span>Haz</span><span>Tem</span><span>Ağu</span><span>Eyl</span><span>Eki</span></div>
             <div class="leg"><span><i style="background:#3ed02b"></i>Gelir</span><span><i style="background:#ee4116"></i>Gider</span></div></div></div>
+        <div class="pnl" data-p="4"><div class="ph">İşletme türünüzü seçin</div><div class="pnote">Menüler, ekranlar ve raporlar seçtiğiniz türe göre ayarlanır. İstediğiniz zaman değiştirebilirsiniz; verileriniz silinmez.</div><div class="bt"><div class="prod on"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 7H6"/></svg><div><b>Market / Bakkal</b><span>Barkodlu kasa satışı</span></div></div><div class="prod"><svg viewBox="0 0 24 24"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 10h2a2 2 0 0 1 0 4h-2"/><path d="M7 3v2M11 3v2M14 3v2"/></svg><div><b>Cafe / Restoran</b><span>Masa adisyonu, reçete</span></div></div><div class="prod"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1L20 20M20 4L8.1 15.9"/></svg><div><b>Kuaför / Güzellik</b><span>Randevu defteri</span></div></div><div class="prod"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5.5A2 2 0 0 1 8.4 9h7.2a2 2 0 0 1 1.9 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/><circle cx="7.5" cy="18" r=".6"/><circle cx="16.5" cy="18" r=".6"/></svg><div><b>Oto Servis</b><span>Plaka bazlı iş emri</span></div></div><div class="prod"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><div><b>Teknik Servis</b><span>Cihaz kabul, parça</span></div></div><div class="prod"><svg viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg><div><b>Giyim / Butik</b><span>Ürün, iade, stok</span></div></div></div></div>
+        <div class="pnl" data-p="5"><div class="ph">Karlılık analizi</div><div class="cards c4"><div class="card" style="border-color:#0a9dff"><small>SATIŞ CİROSU</small><strong>86.100,00 TL</strong></div><div class="card" style="border-color:#ee4116"><small>SATILAN MAL MALİYETİ</small><strong style="color:#ee4116">58.800,00 TL</strong></div><div class="card" style="border-color:#3ed02b"><small>BRÜT KÂR</small><strong style="color:#1b9a3c">27.300,00 TL</strong><em>Brüt marj %31,7</em></div><div class="card" style="border-color:#ffc531"><small>NET KÂR</small><strong style="color:#c28f00">15.080,00 TL</strong><em>Net marj %17,5</em></div></div><div class="tbl"><div class="row h m4"><span>Ürün</span><span>Adet</span><span>Brüt kâr</span><span class="a">Marj</span></div><div class="row m4"><span>Barkod okuyucu</span><span>24</span><span>15.600,00 TL</span><span class="a"><i class="bd ok">%33,3</i></span></div><div class="row m4"><span>Fiş yazıcı</span><span>6</span><span>10.200,00 TL</span><span class="a"><i class="bd ok">%35,4</i></span></div><div class="row m4"><span>Termal etiket rulosu</span><span>30</span><span>1.500,00 TL</span><span class="a"><i class="bd lo">%14,3</i></span></div></div><div class="pnote" style="margin:10px 0 0">Düşük marjlı ürünler kırmızı rozetle işaretlenir. Eşiği siz belirlersiniz.</div></div>
+        <div class="pnl" data-p="6"><div class="ph">Haftalık vardiya planı</div><div class="box ov"><div class="vg"><div class="vh">Personel</div><div class="vh">Pzt</div><div class="vh">Sal</div><div class="vh">Çar</div><div class="vh">Per</div><div class="vh">Cum</div><div><b>Ayşe Kaya</b><small>Kasiyer</small></div><div>09:00–17:00</div><div>09:00–17:00</div><div>09:00–17:00</div><div>09:00–17:00</div><div class="iz">İzinli</div><div><b>Mehmet Demir</b><small>Satış danışmanı</small></div><div>12:00–20:00</div><div>12:00–20:00</div><div>12:00–20:00</div><div>—</div><div>12:00–20:00</div><div><b>Elif Arslan</b><small>Kasiyer</small></div><div>14:00–22:00</div><div>14:00–22:00</div><div>14:00–22:00</div><div>14:00–22:00</div><div>—</div></div></div><div class="ph" style="margin-top:14px">Personel performansı <span class="tag">Bu ay</span></div><div class="tbl"><div class="row h pf"><span>Personel</span><span>Satış</span><span>Ciro</span><span class="a">Ort. sepet</span></div><div class="row pf"><span>Ayşe Kaya</span><span>142</span><span>38.400,00 TL</span><span class="a">270,42 TL</span></div><div class="row pf"><span>Mehmet Demir</span><span>96</span><span>27.600,00 TL</span><span class="a">287,50 TL</span></div><div class="row pf"><span>Elif Arslan</span><span>118</span><span>20.100,00 TL</span><span class="a">170,34 TL</span></div></div></div>
+        <div class="pnl" data-p="7"><div class="ph">Randevular <span class="tag">Kuaför / Güzellik</span></div><div class="cards c4"><div class="card" style="border-color:#0a9dff"><small>RANDEVU</small><strong>5</strong></div><div class="card" style="border-color:#ffc531"><small>BEKLEYEN</small><strong>4</strong></div><div class="card" style="border-color:#3ed02b"><small>TAMAMLANAN</small><strong>1</strong></div><div class="card" style="border-color:#ee4116"><small>GELMEDİ / İPTAL</small><strong>1</strong></div></div><div class="tbl"><div class="row h m4"><span>Saat</span><span>Müşteri</span><span>Hizmet</span><span class="a">Durum</span></div><div class="row m4"><span>10:00</span><span>Zeynep A.</span><span>Saç kesimi, fön</span><span class="a"><i class="bd ok">Tamamlandı</i></span></div><div class="row m4"><span>11:00</span><span>Selin K.</span><span>Saç boyama</span><span class="a"><i class="bd ok">Geldi</i></span></div><div class="row m4"><span>13:30</span><span>Burcu E.</span><span>Manikür</span><span class="a"><i class="bd wt">Bekliyor</i></span></div><div class="row m4"><span>15:00</span><span>Derya Y.</span><span>Cilt bakımı</span><span class="a"><i class="bd wt">Bekliyor</i></span></div><div class="row m4"><span>16:30</span><span>Ceren T.</span><span>Saç kesimi</span><span class="a"><i class="bd wt">Bekliyor</i></span></div><div class="row m4"><span>17:30</span><span>Nilay Ö.</span><span>Kaş tasarımı</span><span class="a"><i class="bd no">İptal</i></span></div></div></div>
       </div>
     </div>
   </div>
-  <p class="hint">Soldaki menüden bölümleri gezebilirsiniz.</p>
+  <p class="hint">Soldaki menüden bölümleri gezebilirsiniz. Ekrandaki isimler ve tutarlar örnek veridir.</p>
   <div class="dl rv" id="indir">
-    <a class="btn p" id="dlbtn" href="#" download>WorkSAL Demo 4.11.2026 </a>
+    <a class="btn p" id="dlbtn" href="#" download>WorkSAL Demo · 4.11.2026</a>
     <ul class="facts"><li>Ücretsiz demo</li><li>Windows 10 ve 11</li><li>İnternet bağlantısı gerekmez</li></ul>
+    <ol class="steps"><li><b>1</b>İndirin</li><li><b>2</b>Kurun</li><li><b>3</b>İşletme türünüzü seçin</li></ol>
     <p class="note">WorkSAL şu an demo aşamasındadır ve aktif olarak geliştirilmektedir. Yeni özellikler düzenli olarak eklenecek; görüş ve önerileriniz bizim için değerli.</p>
   </div>
 </section>
 
 <section id="ozellikler">
   <div class="wrap">
-    <div class="center rv"><h2>Defteri kapatın.<br>Ekranı açın.</h2><p class="sub">Her gün yaptığınız işleri hızlandıran dört temel araç.</p></div>
+    <div class="center rv"><h2>Defteri kapatın.<br>Ekranı açın.</h2><p class="sub">Her gün yaptığınız işleri hızlandıran altı güçlü araç.</p></div>
     <div class="bento">
       <div class="tile rv"><h3>Gelir ve giderinizi anında görün.</h3><p>Her işlemi saniyeler içinde kaydedin. Net kasanız her zaman güncel.</p>
         <div class="viz"><i class="bar" style="--h:70px"></i><i class="bar" style="--h:110px"></i><i class="bar" style="--h:90px"></i><i class="bar" style="--h:150px"></i><i class="bar" style="--h:130px"></i><i class="bar" style="--h:190px"></i></div></div>
@@ -247,6 +314,9 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
       <div class="tile rv"><h3>Stok bitmeden haberiniz olsun.</h3><p>Kritik seviyeye inen ürünler uyarı verir.</p>
         <div class="stock"><div class="srow"><span>Termal etiket rulosu</span><span>6 adet</span></div><div class="track"><div class="fill low" style="--w:12%"></div></div><div class="srow"><span>Barkod okuyucu</span><span>38 adet</span></div><div class="track"><div class="fill" style="--w:84%"></div></div></div></div>
       <div class="tile rv"><h3>Grafikler, raporlar ve Excel’e aktarım.</h3><p>Verilerinizi tek tıkla CSV olarak dışa aktarın, muhasebecinizle paylaşın.</p><div class="csv">Excel’e Aktar (CSV)</div></div>
+
+      <div class="tile rv"><h3>Her işletmeye uyar.</h3><p>15 işletme türü: ekranlar ve menü adları seçiminize göre değişir.</p><div class="chips"><span>Market</span><span>Cafe</span><span>Kuaför</span><span>Oto Servis</span><span>Teknik Servis</span><span>Butik</span></div></div>
+      <div class="tile rv"><h3>Personel ve vardiya.</h3><p>Haftalık plan, mesai kaydı ve satış performansı bir arada.</p><div class="chips"><span>Vardiya planı</span><span>Mesai takibi</span><span>İzin / rapor</span><span>Performans</span></div></div>
     </div>
   </div>
 </section>
@@ -256,9 +326,11 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
   <div class="faq rv">
     <details><summary>WorkSAL ücretsiz mi?</summary><p>WorkSAL şu an 7 günlük deneme (demo) sürümü olarak sunuluyor. Kurulumdan itibaren deneme süresi başlar. Ayrıntılar için <a href="kosullar.html">Kullanım Koşulları</a> sayfasına bakabilirsiniz.</p></details>
     <details><summary>Verilerim nerede tutuluyor?</summary><p>Yalnızca uygulamayı kurduğunuz bilgisayarda. WorkSAL çevrimdışı çalışır; verileriniz bize veya bir buluta gönderilmez. Ayrıntılar <a href="gizlilik.html">Gizlilik Politikası</a> sayfasında.</p></details>
-    <details><summary>Yedek almam gerekiyor mu?</summary><p>Evet. Veriler yalnızca sizin bilgisayarınızda durduğu için düzenli yedek almanızı ve yedeği harici bir diskte saklamanızı öneririz. Uygulama henüz demo aşamasında olduğundan bu özellikle önemlidir.</p></details>
+    <details><summary>Yedek almam gerekiyor mu?</summary><p>Evet. Veriler yalnızca sizin bilgisayarınızda durduğu için düzenli yedek almanızı ve yedeği harici bir diskte saklamanızı öneririz. Uygulama henüz demo aşamasında olduğundan bu özellikle önemlidir. WorkSAL ayrıca açılışta ve her 30 dakikada bir “Belgelerim\WorkSAL Yedek” klasörüne günlük yedek alır.</p></details>
     <details><summary>Kurarken Windows uyarı veriyor, güvenli mi?</summary><p>Uygulama henüz dijital olarak imzalanmadığı için Windows “Bilinmeyen yayıncı” uyarısı gösterebilir. Bu durumda “Ek bilgi” ve ardından “Yine de çalıştır” seçeneğini kullanabilirsiniz.</p></details>
     <details><summary>Hangi Windows sürümleri destekleniyor?</summary><p>Windows 10 ve Windows 11.</p></details>
+    <details><summary>Hangi işletme türleri destekleniyor?</summary><p>Market, toptan, giyim, hırdavat, kırtasiye, cafe, fırın, fast food, teknik servis, oto servis, lastik, kuaför, berber, güzellik merkezi ve pet kuaför / veteriner. İşletme türünü ilk açılışta seçersiniz; sol menüdeki “İşletme Türü” düğmesinden istediğiniz zaman değiştirebilirsiniz, verileriniz silinmez.</p></details>
+    <details><summary>Verileri dışa veya içe aktarabilir miyim?</summary><p>Evet. Gelir-gider ve stok listelerini CSV (Excel) olarak indirebilir, sayfaları PDF olarak kaydedebilir, Excel (.xlsx) veya CSV dosyasından stok ve gelir-gider kaydı içe aktarabilirsiniz.</p></details>
     <details><summary>Hata buldum veya öneri iletmek istiyorum.</summary><p>Memnuniyetle dinleriz: <a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></p></details>
   </div>
 </div></section>
@@ -268,18 +340,15 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
     <a class="mail" href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></div>
 </section>
 
-<!-- Yeni Yasal Footer -->
+</main>
 <footer>
-  <div class="fl">
-    <a href="index.html">Ana Sayfa</a>
-    <a href="gizlilik.html">Gizlilik Politikası</a>
-    <a href="kosullar.html">Kullanım Koşulları (Beta)</a>
-    <a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a>
+  <div class="fg">
+    <div class="fb"><b>CentraSAL</b><p>İşletmeler için sade, çevrimdışı çalışan yazılımlar geliştiriyoruz.</p></div>
+    <div><h4>Ürün</h4><a href="worksal.html">WorkSAL</a><a href="worksal.html#indir">Demo’yu indir</a><a href="worksal.html#sss">Sık sorulan sorular</a></div>
+    <div><h4>Kurumsal</h4><a href="index.html#hakkimizda">Hakkımızda</a><a href="index.html#vizyon">Vizyon ve misyon</a><a href="gizlilik.html">Gizlilik Politikası</a><a href="kosullar.html">Kullanım Koşulları (Beta)</a></div>
+    <div><h4>İletişim</h4><a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></div>
   </div>
-  <div>
-    <b style="color: #fff; letter-spacing: 1px;">CentraSAL</b> &copy; 2026 Tüm hakları saklıdır.<br>
-    <span style="font-size: 11px; opacity: 0.6; display: block; margin-top: 5px;">WorkSAL Pro ERP & POS (Beta)</span>
-  </div>
+  <div class="fc"><span>&copy; 2026 CentraSAL. Tüm hakları saklıdır.</span><span>WorkSAL Pro ERP &amp; POS (Beta)</span></div>
 </footer>
 
 <script>
@@ -332,6 +401,33 @@ nav ul>li>a:not(.navcta):hover::after,nav ul>li>a.act::after{transform:scaleX(1)
     e.preventDefault();document.body.classList.add("leaving");setTimeout(function(){location.href=u.href},reduce?0:280)});
   addEventListener("pageshow",function(e){if(e.persisted)document.body.classList.remove("leaving")});
 })();
+</script>
+<script>
+(function(){var n=document.querySelector("nav"),b=n.querySelector(".burger");if(!b)return;
+function set(o){n.classList.toggle("mo",o);b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Menüyü kapat":"Menüyü aç")}
+b.addEventListener("click",function(e){e.stopPropagation();set(!n.classList.contains("mo"))});
+n.querySelectorAll("#navlist a").forEach(function(a){a.addEventListener("click",function(){set(false)})});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
+document.addEventListener("click",function(e){if(!n.contains(e.target))set(false)});
+addEventListener("resize",function(){if(innerWidth>720)set(false)});})();
+</script>
+<script>
+(function(){var app=document.getElementById("app"),side=document.querySelector(".side");if(!app||!side)return;
+var tabs=[].slice.call(side.querySelectorAll(".m")),pn=[].slice.call(document.querySelectorAll(".pnl"));
+side.setAttribute("role","tablist");
+tabs.forEach(function(t,i){t.setAttribute("role","tab");t.id="tab"+i;t.setAttribute("aria-controls","pnl"+i);pn[i].id="pnl"+i;pn[i].setAttribute("role","tabpanel");pn[i].setAttribute("aria-labelledby","tab"+i)});
+function sync(){tabs.forEach(function(t){var on=t.classList.contains("on");t.setAttribute("aria-selected",on);t.tabIndex=on?0:-1})}
+sync();var mo=new MutationObserver(sync);tabs.forEach(function(t){mo.observe(t,{attributes:true,attributeFilter:["class"]})});
+side.addEventListener("keydown",function(e){var i=tabs.indexOf(document.activeElement);if(i<0)return;
+var d={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];if(!d&&e.key!=="Home"&&e.key!=="End")return;e.preventDefault();
+var j=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+d+tabs.length)%tabs.length;tabs[j].focus();tabs[j].click()});
+var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,timer=null,vis=false,stopped=false;
+function next(){var i=tabs.findIndex(function(t){return t.classList.contains("on")});tabs[(i+1)%tabs.length].click()}
+function start(){if(reduce||stopped||timer||!vis)return;timer=setInterval(next,5200)}
+function stop(){clearInterval(timer);timer=null}
+new IntersectionObserver(function(es){vis=es[0].isIntersecting;vis?start():stop()},{threshold:.5}).observe(app);
+["pointerdown","keydown","focusin"].forEach(function(ev){side.addEventListener(ev,function(){stopped=true;stop()})});
+app.addEventListener("pointerenter",stop);app.addEventListener("pointerleave",start);})();
 </script>
 </body>
 </html>
