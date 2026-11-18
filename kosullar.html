@@ -28,26 +28,33 @@ body.leaving{opacity:0;transform:translateY(-6px);transition:opacity .28s,transf
 <body>
 <div class="wrap">
   <a href="index.html" class="back">← Ana Sayfaya Dön</a>
-  <h1>Kullanım Koşulları (Beta Sürüm Sözleşmesi)</h1>
-  <p>Lütfen WorkSAL ("Yazılım") uygulamasını kurmadan önce bu sözleşmeyi okuyunuz.</p>
+  <h1>Kullanım Koşulları</h1>
+  <p>Lütfen CentraSAL yazılımlarını (WorkSAL ve QuantSAL, birlikte “Yazılımlar”) kurmadan önce bu koşulları okuyunuz.</p>
 
-  <h3>1. Beta (Geliştirme) Aşaması ve Deneme Sürümü</h3>
+  <h3>1. Yazılımların Kapsamı ve Sürümleri</h3>
   <ul>
-    <li>WorkSAL, şu an aktif olarak geliştirilme (BETA) sürecinde olan bir yazılımdır ve kullanıcılara yalnızca <b>"Deneme Sürümü" (Demo)</b> olarak sunulmaktadır. Ticari bir tam sürüm satışı henüz bulunmamaktadır.</li>
-    <li>Uygulama, kurulduğu andan itibaren 7 günlük deneme süresi başlatır. Zamanı manipüle etmek amacıyla sistem saatini değiştirmek veya kırma (bypass) girişimlerinde bulunmak yasaktır.</li>
+    <li><b>WorkSAL:</b> Gelir, gider, hızlı satış ve stok takibi yapan ön muhasebe uygulamasıdır ve tam sürüm olarak sunulmaktadır.</li>
+    <li><b>QuantSAL:</b> CSV / TXT veri dosyaları üzerinde tanımlayıcı istatistik, OLS regresyon ve 2D / 3D grafik oluşturma imkânı sunan istatistik ve ekonometri uygulamasıdır. QuantSAL şu an ilk sürüm (v0.1.0) aşamasındadır; özellikleri geri bildirimlere göre geliştirilmeye devam etmektedir.</li>
+    <li>Yazılımları bu koşullara aykırı biçimde kullanmak, kopyalamak, çoğaltmak, kaynağını değiştirmek veya kullanım sınırlamalarını aşmaya çalışmak yasaktır.</li>
   </ul>
 
   <h3>2. Veri Güvenliği ve Yedekleme Sorumluluğu</h3>
-  <p>WorkSAL bir bulut (cloud) sistemi değildir. Verileriniz yalnızca uygulamayı kurduğunuz bilgisayarda tutulur.</p>
+  <p>Yazılımlar bulut (cloud) sistemi değildir. Verileriniz yalnızca uygulamayı kurduğunuz bilgisayarda tutulur.</p>
   <div class="warn">
-    Yazılımın geliştirme (Beta) aşamasında olması sebebiyle beklenmeyen çökmeler yaşanabilir. Kullanıcı, veri kayıplarını önlemek amacıyla <b>düzenli olarak yedek almakla</b> ve bu yedekleri harici bir diskte saklamakla yükümlüdür. Bilgisayarın arızalanması, virüs bulaşması veya yazılımsal bir hata sonucu oluşabilecek veri kayıplarından CentraSAL sorumlu tutulamaz.
+    Kullanıcı, veri kayıplarını önlemek amacıyla <b>düzenli olarak yedek almakla</b> ve bu yedekleri harici bir diskte saklamakla yükümlüdür. Bilgisayarın arızalanması, virüs bulaşması veya yazılımsal bir hata sonucu oluşabilecek veri kayıplarından CentraSAL sorumlu tutulamaz. QuantSAL'da analiz ettiğiniz özgün veri dosyalarınızı da ayrıca saklamanız önerilir.
   </div>
 
-  <h3>3. Geri Bildirim ve Geliştirme</h3>
-  <p>Karşılaştığınız hataları veya önerilerinizi <b>iletisim@centrasal.com</b> adresi üzerinden bize ileterek uygulamanın şekillenmesine katkıda bulunabilirsiniz.</p>
+  <h3>3. QuantSAL Sonuçlarının Kullanımı</h3>
+  <ul>
+    <li>QuantSAL'ın ürettiği istatistikler, regresyon sonuçları ve grafikler bilgilendirme ve analiz desteği amacıyla sunulur.</li>
+    <li>Sonuçların doğruluğunu, kullanılan verinin ve modelin uygunluğunu kontrol etmek kullanıcının sorumluluğundadır. Akademik çalışma, yatırım, finansal veya diğer önemli kararlarda yalnızca bu sonuçlara dayanılmamalı, gerektiğinde bağımsız doğrulama ve uzman görüşü alınmalıdır.</li>
+  </ul>
 
-  <h3>4. Sorumluluk Reddi</h3>
-  <p>Yazılım "Olduğu Gibi" (AS IS) sunulmaktadır. CentraSAL, uygulamanın hatasız çalışacağını garanti etmez. WorkSAL resmi bir mali müşavirlik yazılımı değildir. Resmi beyannamelerdeki doğruluk sorumluluğu kullanıcıya aittir.</p>
+  <h3>4. Geri Bildirim ve Geliştirme</h3>
+  <p>Karşılaştığınız hataları veya önerilerinizi <b>iletisim@centrasal.com</b> adresi üzerinden bize ileterek uygulamaların şekillenmesine katkıda bulunabilirsiniz.</p>
+
+  <h3>5. Sorumluluk Reddi</h3>
+  <p>Yazılımlar "Olduğu Gibi" (AS IS) sunulmaktadır. CentraSAL, uygulamaların kesintisiz veya hatasız çalışacağını garanti etmez. WorkSAL resmi bir mali müşavirlik yazılımı değildir; resmi beyannamelerdeki doğruluk sorumluluğu kullanıcıya aittir. QuantSAL sonuçlarının yorumlanmasından ve bu sonuçlara dayanılarak alınan kararlardan kullanıcı sorumludur.</p>
 </div>
 <script>
 (function(){var r=matchMedia("(prefers-reduced-motion:reduce)").matches;

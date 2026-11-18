@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CentraSAL | İşletmeler için sade ve yerel yazılımlar geliştiren girişim</title>
-<meta name="description" content="CentraSAL, küçük işletmeler için sade, çevrimdışı çalışan yazılımlar geliştiren genç bir girişimdir. İlk ürünümüz WorkSAL demo sürümüyle yayında.">
+<meta name="description" content="CentraSAL, küçük işletmeler için sade, çevrimdışı çalışan yazılımlar geliştiren genç bir girişimdir. Ürünlerimiz: WorkSAL (ön muhasebe ve POS) ve QuantSAL (istatistik ve ekonometri).">
 <meta name="theme-color" content="#000000">
 <meta property="og:type" content="website"><meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="CentraSAL – İşinizin merkezi"><meta property="og:description" content="WorkSAL: gelir, gider, hızlı satış ve stok takibi tek pencerede.">
@@ -101,7 +101,8 @@ section.s{padding:110px 22px}.lead{color:var(--mut);font-size:clamp(17px,2vw,20p
 .cards .tile .n{color:var(--cyan);font-weight:700;font-size:13px;letter-spacing:.08em;margin-bottom:14px;display:block}
 .vm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}.vm .tile:nth-child(n){grid-column:auto;min-height:0}.vm h3{font-size:26px;max-width:none}
 .pcard{max-width:760px;margin:56px auto 0;text-align:center}.pcard:nth-child(n){grid-column:auto}.pcard h3{max-width:none;margin:0 auto}.pcard p{margin-inline:auto;max-width:520px}.pcard .btn{margin-top:26px}
-@media(max-width:760px){.cards,.vm{grid-template-columns:1fr}section.s{padding:80px 22px}}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}.pgrid .pcard{margin:0;max-width:none;display:flex;flex-direction:column;align-items:center}.pgrid .pcard .btn{margin-top:auto;align-self:center}.pgrid .pcard p{margin-bottom:26px}
+@media(max-width:760px){.cards,.vm,.pgrid{grid-template-columns:1fr}section.s{padding:80px 22px}}
 
 /* ---- Profesyonel dokunuşlar ---- */
 #pb{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,var(--cyan),var(--blue));z-index:40;pointer-events:none}
@@ -177,7 +178,7 @@ footer{text-align:left;padding:56px 22px 34px}
     CentraSAL
   </a>
   <button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlist"><span></span></button>
-  <ul id="navlist"><li><a href="#hakkimizda">Hakkımızda</a></li><li><a href="#vizyon">Vizyon</a></li><li class="dd" id="dd"><button type="button" aria-expanded="false" aria-controls="ddm" id="ddb">Ürünler</button><div class="menu" id="ddm"><a href="worksal.html">WorkSAL</a></div></li><li><a href="#iletisim">İletişim</a></li></ul>
+  <ul id="navlist"><li><a href="#hakkimizda">Hakkımızda</a></li><li><a href="#vizyon">Vizyon</a></li><li class="dd" id="dd"><button type="button" aria-expanded="false" aria-controls="ddm" id="ddb">Ürünler</button><div class="menu" id="ddm"><a href="worksal.html">WorkSAL</a><a href="quantsal.html">QuantSAL</a></div></li><li><a href="#iletisim">İletişim</a></li></ul>
 </nav>
 
 <header class="hero" id="top">
@@ -190,7 +191,7 @@ footer{text-align:left;padding:56px 22px 34px}
   </svg>
   <h1>İşinizin merkezi.</h1>
   <p>CentraSAL, işletmelerin parasını, stoğunu ve rakamlarını tek yerde toplayan yazılımlar geliştiren, yolun başındaki bir yazılım girişimidir.</p>
-  <div class="cta"><a class="btn p" href="#hakkimizda">Bizi tanıyın</a><a class="btn s" href="worksal.html">WorkSAL’ı keşfet</a><a class="btn s" href="#iletisim">İletişime geç</a></div>
+  <div class="cta"><a class="btn p" href="#hakkimizda">Bizi tanıyın</a><a class="btn s" href="worksal.html">WorkSAL’ı keşfet</a><a class="btn s" href="quantsal.html">QuantSAL’ı keşfet</a><a class="btn s" href="#iletisim">İletişime geç</a></div>
   <a class="cue" href="#hakkimizda" aria-label="Aşağı kaydır"></a>
 </header>
 
@@ -219,9 +220,9 @@ footer{text-align:left;padding:56px 22px 34px}
 <section class="s" id="yol"><div class="wrap">
   <div class="center rv"><h2>Neredeyiz, nereye gidiyoruz?</h2></div>
   <div class="cards">
-    <div class="tile rv"><span class="n">ŞİMDİ</span><h3>İlk ürün yayında.</h3><p>WorkSAL demo sürümü indirilebilir durumda. Kullanıcılardan gelen geri bildirimleri topluyoruz.</p></div>
+    <div class="tile rv"><span class="n">ŞİMDİ</span><h3>İlk ürün yayında.</h3><p>WorkSAL tam sürümü indirilebilir durumda. Kullanıcılardan gelen geri bildirimleri topluyoruz.</p></div>
     <div class="tile rv"><span class="n">SIRADA</span><h3>WorkSAL gelişiyor.</h3><p>Yeni özellikler ve iyileştirmeler, gelen önerilere göre düzenli olarak eklenecek.</p></div>
-    <div class="tile rv"><span class="n">HEDEF</span><h3>Yeni ürünler.</h3><p>Aynı sadelik anlayışıyla işletmelere yönelik yeni yazılımlar geliştirmek.</p></div>
+    <div class="tile rv"><span class="n">HEDEF</span><h3>Yeni ürünler.</h3><p>İkinci ürünümüz QuantSAL ile istatistik ve ekonometri tarafına da adım attık. Aynı sadelik anlayışıyla yeni yazılımlar geliştirmeye devam edeceğiz.</p></div>
   </div>
 </div></section>
 
@@ -233,9 +234,14 @@ footer{text-align:left;padding:56px 22px 34px}
 
 <section class="s" id="urunler"><div class="wrap">
   <div class="center rv"><h2>Ürünlerimiz</h2></div>
-  <div class="tile pcard rv"><span class="badge">DEMO SÜRÜM</span><h3>WorkSAL</h3>
-    <p>Gelir, gider, hızlı satış ve stok takibini tek pencerede toplayan ön muhasebe uygulaması.</p>
-    <a class="btn p" href="worksal.html">WorkSAL’ı incele</a></div>
+  <div class="pgrid">
+    <div class="tile pcard rv"><span class="badge">TAM SÜRÜM</span><h3>WorkSAL</h3>
+      <p>Gelir, gider, hızlı satış ve stok takibini tek pencerede toplayan ön muhasebe uygulaması.</p>
+      <a class="btn p" href="worksal.html">WorkSAL’ı incele</a></div>
+    <div class="tile pcard rv"><span class="badge">YENİ · İLK SÜRÜM</span><h3>QuantSAL</h3>
+      <p>Veriyi yükleyin; tanımlayıcı istatistikleri, OLS regresyonu ve 2D/3D grafikleri tek pencerede, çevrimdışı çalışan bir masaüstü uygulamasında görün.</p>
+      <a class="btn p" href="quantsal.html">QuantSAL’ı incele</a></div>
+  </div>
 </div></section>
 
 <section id="iletisim">
@@ -247,11 +253,11 @@ footer{text-align:left;padding:56px 22px 34px}
 <footer>
   <div class="fg">
     <div class="fb"><b>CentraSAL</b><p>İşletmeler için sade, çevrimdışı çalışan yazılımlar geliştiriyoruz.</p></div>
-    <div><h4>Ürün</h4><a href="worksal.html">WorkSAL</a><a href="worksal.html#indir">Demo’yu indir</a><a href="worksal.html#sss">Sık sorulan sorular</a></div>
-    <div><h4>Kurumsal</h4><a href="#hakkimizda">Hakkımızda</a><a href="#vizyon">Vizyon ve misyon</a><a href="gizlilik.html">Gizlilik Politikası</a><a href="kosullar.html">Kullanım Koşulları (Beta)</a></div>
+    <div><h4>Ürün</h4><a href="worksal.html">WorkSAL</a><a href="quantsal.html">QuantSAL</a><a href="worksal.html#indir">WorkSAL’ı indir</a><a href="worksal.html#sss">Sık sorulan sorular</a></div>
+    <div><h4>Kurumsal</h4><a href="#hakkimizda">Hakkımızda</a><a href="#vizyon">Vizyon ve misyon</a><a href="gizlilik.html">Gizlilik Politikası</a><a href="kosullar.html">Kullanım Koşulları</a></div>
     <div><h4>İletişim</h4><a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></div>
   </div>
-  <div class="fc"><span>&copy; 2026 CentraSAL. Tüm hakları saklıdır.</span><span>WorkSAL Pro ERP &amp; POS (Beta)</span></div>
+  <div class="fc"><span>&copy; 2026 CentraSAL. Tüm hakları saklıdır.</span><span>WorkSAL Pro ERP &amp; POS · QuantSAL</span></div>
 </footer>
 
 <script>
