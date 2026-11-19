@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://centrasal.vercel.app/quantsal.html"><meta property="og:site_name" content="CentraSAL"><meta name="twitter:card" content="summary">
 <link rel="apple-touch-icon" href="centrasal-logo-2048-siyah.png">
 <meta name="robots" content="index,follow"><meta property="og:image" content="https://centrasal.vercel.app/centrasal-logo-2048-siyah.png"><meta name="twitter:image" content="https://centrasal.vercel.app/centrasal-logo-2048-siyah.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QuantSAL","applicationCategory":"EducationalApplication","operatingSystem":"Windows","description":"İstatistik ve ekonometri analizi için çevrimdışı çalışan masaüstü uygulaması.","publisher":{"@type":"Organization","name":"CentraSAL","url":"https://centrasal.vercel.app/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QuantSAL","applicationCategory":"EducationalApplication","operatingSystem":"Windows","softwareVersion":"0.5.0","downloadUrl":"https://github.com/keremcentrasal-tech/QuantSAL/releases/download/v0.5.0/QuantSAL-Setup-0.5.0.exe","description":"İstatistik ve ekonometri analizi için çevrimdışı çalışan masaüstü uygulaması.","publisher":{"@type":"Organization","name":"CentraSAL","url":"https://centrasal.vercel.app/"}}</script>
 <style>
 :root{--bg:#000;--bg2:#0b0b0d;--line:rgba(255,255,255,.1);--tx:#f5f5f7;--mut:#86868b;--blue:#0a9dff;--cyan:#5ee7ff;--green:#3ed02b;--red:#ee4116;--amber:#ffc531;
 --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -204,6 +204,13 @@ footer{text-align:left;padding:56px 22px 34px}
 .faq p{color:var(--mut);margin-top:12px;font-size:15px}
 @media(max-width:760px){.fgrid,.three{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.qlogo,.hero.q .win{opacity:1;animation:none}}
+/* indirme */
+.dlcard:nth-child(n){grid-column:auto;min-height:0;max-width:760px;margin:56px auto 0;text-align:center;padding:46px 34px;display:flex;flex-direction:column;align-items:center}
+.dlcard h3{max-width:none;font-size:30px}.dlcard p{max-width:520px;margin-inline:auto}
+.dlcard .btn{margin-top:28px;font-size:18px;padding:15px 34px}.dlcard .facts{margin-top:26px}
+.dlnotes{max-width:640px;margin:30px auto 0;display:grid;gap:14px}
+.dlnotes .note{max-width:none;text-align:left;border-left:2px solid var(--line);padding-left:16px;line-height:1.6}.dlnotes b{color:#d2d2d7}
+.dlnotes a{color:var(--cyan);border-bottom:1px solid rgba(94,231,255,.35)}
 </style>
 </head>
 <body>
@@ -219,15 +226,15 @@ footer{text-align:left;padding:56px 22px 34px}
     CentraSAL
   </a>
   <button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlist"><span></span></button>
-  <ul id="navlist"><li><a href="#ozellikler">Özellikler</a></li><li><a href="#grafikler">Grafikler</a></li><li><a href="#kimler">Kimler için</a></li><li><a href="#sss">SSS</a></li><li class="dd" id="dd"><button type="button" aria-expanded="false" aria-controls="ddm" id="ddb">Ürünler</button><div class="menu" id="ddm"><a href="worksal.html">WorkSAL</a><a href="quantsal.html">QuantSAL</a></div></li><li><a href="#iletisim" class="navcta">İletişim</a></li></ul>
+  <ul id="navlist"><li><a href="#ozellikler">Özellikler</a></li><li><a href="#grafikler">Grafikler</a></li><li><a href="#kimler">Kimler için</a></li><li><a href="#indir">İndir</a></li><li><a href="#sss">SSS</a></li><li class="dd" id="dd"><button type="button" aria-expanded="false" aria-controls="ddm" id="ddb">Ürünler</button><div class="menu" id="ddm"><a href="worksal.html">WorkSAL</a><a href="quantsal.html">QuantSAL</a></div></li><li><a href="#iletisim" class="navcta">İletişim</a></li></ul>
 </nav>
 
 <header class="hero q" id="top">
   <div class="qlogo">Quant<span>SAL</span><small>by CentraSAL</small></div>
-  <span class="badge" style="animation:up 1s .05s both">YENİ · Geliştirilmekte</span>
+  <span class="badge" style="animation:up 1s .05s both">YENİ · v0.5.0 yayında</span>
   <h1>Veriden sonuca,<br>tek pencerede.</h1>
   <p>QuantSAL, verinizi yükleyip tanımlayıcı istatistikleri, OLS regresyonu ve 2D / 3D grafikleri dakikalar içinde görmenizi sağlayan, çevrimdışı çalışan bir istatistik ve ekonometri uygulamasıdır.</p>
-  <div class="cta"><a class="btn p" href="#iletisim">Bize ulaşın</a><a class="btn s" href="#ozellikler">Özellikleri keşfet</a></div>
+  <div class="cta"><a class="btn p" href="https://github.com/keremcentrasal-tech/QuantSAL/releases/download/v0.5.0/QuantSAL-Setup-0.5.0.exe" download rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 20h16"/></svg>v0.5.0 İndir</a><a class="btn s" href="#ozellikler">Özellikleri keşfet</a></div>
 
   <div class="win" aria-label="QuantSAL arayüzünden örnek ekran">
     <div class="bar2"><i></i><i></i><i></i><em>QuantSAL – Regresyon</em></div>
@@ -299,19 +306,36 @@ footer{text-align:left;padding:56px 22px 34px}
   <div class="rv" style="margin-top:46px"><ol class="steps"><li><b>1</b>Verini yükle</li><li><b>2</b>Değişkenleri seç</li><li><b>3</b>Sonucu ve grafiği gör</li></ol></div>
 </div></section>
 
+<section class="s" id="indir"><div class="wrap">
+  <div class="center rv"><h2>QuantSAL'ı indir.</h2><p class="lead">Windows için kurulum dosyasını indirin ve 7 gün boyunca deneyin.</p></div>
+  <div class="tile dlcard rv">
+    <span class="badge">SÜRÜM 0.5.0</span>
+    <h3>QuantSAL Setup 0.5.0</h3>
+    <p>Windows için kurulum dosyası (.exe). Kurulum sihirbazı sizi adım adım yönlendirir.</p>
+    <a class="btn p" href="https://github.com/keremcentrasal-tech/QuantSAL/releases/download/v0.5.0/QuantSAL-Setup-0.5.0.exe" download rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 20h16"/></svg>v0.5.0 İndir</a>
+    <ul class="facts"><li>7 gün deneme süresi</li><li>Çevrimdışı çalışır</li><li>Windows 10 / 11</li></ul>
+  </div>
+  <div class="dlnotes rv">
+    <p class="note"><b>Windows uyarısı:</b> Kurulumda "Windows bilgisayarınızı korudu" uyarısı çıkarsa <b>Daha fazla bilgi</b> → <b>Yine de çalıştır</b> seçeneklerini kullanın. Uygulama henüz kod imzalama sertifikası taşımadığı için Windows yayıncıyı tanıyamıyor.</p>
+    <p class="note"><b>Lisans:</b> Deneme süresi bittikten sonra devam etmek için uygulamadaki makine kodunu <a href="mailto:keremcentrasal@gmail.com?subject=QuantSAL%20Lisans%20Talebi">keremcentrasal@gmail.com</a> adresine gönderin. Size bilgisayarınıza özel bir lisans anahtarı iletilir.</p>
+  </div>
+</div></section>
+
 <section class="s" id="sss"><div class="wrap">
   <div class="center rv"><h2>Sık sorulan sorular.</h2></div>
   <div class="faq rv">
     <details><summary>QuantSAL internet bağlantısı gerektirir mi?</summary><p>Hayır. QuantSAL çevrimdışı çalışır; verileriniz kendi bilgisayarınızda kalır.</p></details>
     <details><summary>Hangi dosya türlerini açabilirim?</summary><p>CSV ve TXT dosyalarını açabilirsiniz. Denemek için uygulamadaki örnek veriyi de kullanabilirsiniz.</p></details>
     <details><summary>Hangi analizleri yapabiliyor?</summary><p>İlk sürümde tanımlayıcı istatistikler, OLS regresyon (isteğe bağlı robust HC1 standart hatalarla) ve 2D / 3D grafikler bulunur.</p></details>
-    <details><summary>Uygulama hangi aşamada?</summary><p>QuantSAL çok yakında. Yolun başındayız ve yeni özellikleri sizden gelen geri bildirimlerle belirleyeceğiz.</p></details>
+    <details><summary>Uygulama hangi aşamada?</summary><p>QuantSAL v0.5.0 yayında. Geliştirmeye devam ediyoruz ve yeni özellikleri sizden gelen geri bildirimlerle belirliyoruz.</p></details>
+    <details><summary>Deneme süresi ve lisans nasıl işliyor?</summary><p>Uygulama ilk açıldığı andan itibaren 7 gün boyunca denenebilir. Süre dolunca devam etmek için lisans anahtarı gerekir: uygulamadaki makine kodunu e-postayla bize gönderirsiniz, size bilgisayarınıza özel anahtar iletilir.</p></details>
+    <details><summary>Windows neden "bilinmeyen yayıncı" uyarısı veriyor?</summary><p>Uygulama henüz kod imzalama sertifikası taşımıyor. Uyarıda <b>Daha fazla bilgi</b> → <b>Yine de çalıştır</b> seçeneklerini kullanarak kuruluma devam edebilirsiniz.</p></details>
     <details><summary>Öneri ve hata bildirimini nasıl iletebilirim?</summary><p>Aşağıdaki e-posta adresinden bize yazabilirsiniz. Her mesaj okunur ve değerlendirilir.</p></details>
   </div>
 </div></section>
 
 <section id="iletisim">
-  <div class="wrap rv"><h2>QuantSAL hakkında konuşalım.</h2><p class="sub" style="margin-inline:auto">Soru, öneri ya da erken erişim talebi için bize yazın.</p>
+  <div class="wrap rv"><h2>QuantSAL hakkında konuşalım.</h2><p class="sub" style="margin-inline:auto">Soru, öneri ya da lisans talebi için bize yazın.</p>
     <a class="mail" href="mailto:keremcentrasal@gmail.com?subject=QuantSAL">keremcentrasal@gmail.com</a></div>
 </section>
 </main>
@@ -323,7 +347,7 @@ footer{text-align:left;padding:56px 22px 34px}
     <div><h4>Kurumsal</h4><a href="index.html#hakkimizda">Hakkımızda</a><a href="index.html#vizyon">Vizyon ve misyon</a><a href="gizlilik.html">Gizlilik Politikası</a><a href="kosullar.html">Kullanım Koşulları</a></div>
     <div><h4>İletişim</h4><a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></div>
   </div>
-  <div class="fc"><span>&copy; 2026 CentraSAL. Tüm hakları saklıdır.</span><span>QuantSAL İstatistik &amp; Ekonometri v0.1.0</span></div>
+  <div class="fc"><span>&copy; 2026 CentraSAL. Tüm hakları saklıdır.</span><span>QuantSAL İstatistik &amp; Ekonometri v0.5.0</span></div>
 </footer>
 
 <button id="up" type="button" aria-label="Sayfa başına dön">↑</button>
