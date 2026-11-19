@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sayfa bulunamadı | CentraSAL</title><meta name="robots" content="noindex">
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sayfa bulunamadı | CentraSAL</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<style>:root{--blue:#0a9dff;--cyan:#5ee7ff}*{box-sizing:border-box;margin:0}
-body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:#000;color:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;animation:i .7s}@keyframes i{from{opacity:0;transform:translateY(8px)}}
-h1{font-size:clamp(84px,22vw,180px);letter-spacing:-.05em;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-p{color:#86868b;font-size:18px;margin:12px 0 32px}a{display:inline-block;padding:13px 26px;border-radius:980px;background:var(--blue);color:#fff;text-decoration:none;font-weight:500;transition:transform .25s,box-shadow .25s}a:hover{transform:scale(1.05);box-shadow:0 8px 40px rgba(10,157,255,.45)}</style></head>
-<body><h1>404</h1><p>Aradığınız sayfa bulunamadı.</p><a href="/">Ana sayfaya dön</a></body></html>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<div id="pb"></div>
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ee7ff"/><stop offset="1" stop-color="#0a7dff"/></linearGradient></defs></svg>
+<nav>
+  <a class="brand" href="/index.html" aria-label="CentraSAL ana sayfa">
+    <svg viewBox="0 0 64 64" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"><path d="M51.9 15.3A26 26 0 1 0 51.9 48.7"/><path d="M43.5 22.4A15 15 0 1 0 43.5 41.6" transform="rotate(180 32 32)"/><circle cx="32" cy="32" r="3.5" fill="url(#g)" stroke="none"/></svg>
+    CentraSAL
+  </a>
+  <button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlist"><span></span></button>
+  <ul id="navlist"><li><a href="/index.html#hakkimizda">Hakkımızda</a></li><li><a href="/index.html#vizyon">Vizyon</a></li><li class="dd" id="dd"><button type="button" aria-expanded="false" aria-controls="ddm" id="ddb">Ürünler</button><div class="menu" id="ddm"><a href="/worksal.html">WorkSAL</a><a href="/quantsal.html">QuantSAL</a></div></li><li><a href="/index.html#iletisim">İletişim</a></li></ul>
+</nav>
+
+<main class="e404">
+  <h1 class="a1">404</h1>
+  <p class="a2">Aradığınız sayfa bulunamadı.</p>
+  <div class="cta a3"><a class="btn p" href="/index.html">Ana sayfaya dön</a><a class="btn s" href="/worksal.html">WorkSAL</a><a class="btn s" href="/quantsal.html">QuantSAL</a></div>
+</main>
+
+<footer>
+  <div class="fg">
+    <div class="fb"><b>CentraSAL</b><p>İşletmeler için sade, çevrimdışı çalışan yazılımlar geliştiriyoruz.</p></div>
+    <div><h4>Ürünler</h4><a href="/worksal.html">WorkSAL</a><a href="/quantsal.html">QuantSAL</a><a href="/worksal.html#indir">WorkSAL’ı indir</a><a href="/quantsal.html#indir">QuantSAL’ı indir</a></div>
+    <div><h4>Kurumsal</h4><a href="/index.html#hakkimizda">Hakkımızda</a><a href="/index.html#vizyon">Vizyon ve misyon</a><a href="/gizlilik.html">Gizlilik Politikası</a><a href="/kosullar.html">Kullanım Koşulları</a></div>
+    <div><h4>İletişim</h4><a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></div>
+  </div>
+  <div class="fc"><span>&copy; 2026 CentraSAL. Tüm hakları saklıdır.</span><span>WorkSAL · QuantSAL</span></div>
+</footer>
+<button id="up" type="button" aria-label="Sayfa başına dön">↑</button>
+<script src="/site.js"></script>
+</body>
+</html>

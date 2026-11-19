@@ -3,66 +3,184 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kullanım Koşulları | CentraSAL</title>
+<meta name="description" content="WorkSAL ve QuantSAL kullanım koşulları: lisans, 7 gün deneme, lisans anahtarı, yedekleme sorumluluğu, sonuçların kullanımı ve sorumluluk sınırları.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website"><meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Kullanım Koşulları – CentraSAL"><meta property="og:description" content="WorkSAL ve QuantSAL için lisans, deneme süresi, yedekleme ve sorumluluk koşulları.">
+<meta property="og:url" content="https://centrasal.vercel.app/kosullar.html"><meta property="og:site_name" content="CentraSAL">
+<meta property="og:image" content="https://centrasal.vercel.app/centrasal-logo-2048-siyah.png"><meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="centrasal-logo-2048-siyah.png" type="image/png">
-<meta name="theme-color" content="#000000">
-<title>Kullanım Koşulları | CentraSAL</title>
-<style>
-:root{--bg:#000;--line:rgba(255,255,255,.1);--tx:#f5f5f7;--mut:#86868b;--blue:#0a9dff;
---font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,sans-serif;}
-body{background:var(--bg);color:var(--tx);font-family:var(--font);line-height:1.6;margin:0;padding:40px 22px;}
-.wrap{max-width:800px;margin:0 auto;}
-a{color:var(--blue);text-decoration:none;} a:hover{text-decoration:underline;}
-.back{display:inline-block;margin-bottom:30px;font-size:14px;color:var(--mut);border:1px solid var(--line);padding:8px 16px;border-radius:8px;}
-h1{font-size:32px;letter-spacing:-.02em;margin-bottom:10px;}
-h3{margin-top:30px;color:#fff;}
-p, ul{color:var(--mut);font-size:15px;}
-li{margin-bottom:8px;}
-.warn{background:rgba(238, 65, 22, 0.1); border-left:4px solid #ee4116; padding:12px; border-radius:4px; color:#f5f5f7; margin-top:10px;}
-html{scroll-behavior:smooth}body{animation:pgin .7s cubic-bezier(.2,.7,.2,1)}@keyframes pgin{from{opacity:0;transform:translateY(8px)}}
-body.leaving{opacity:0;transform:translateY(-6px);transition:opacity .28s,transform .28s}
-.back{transition:background .25s,color .25s,border-color .25s}.back:hover{background:rgba(255,255,255,.08);color:#fff;text-decoration:none}
-@media(prefers-reduced-motion:reduce){body{animation:none}}
-</style>
+<link rel="apple-touch-icon" href="centrasal-logo-2048-siyah.png">
+<link rel="canonical" href="https://centrasal.vercel.app/kosullar.html">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="site.css">
+<noscript><style>.rv,.a1,.a2,.a3{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-<div class="wrap">
-  <a href="index.html" class="back">← Ana Sayfaya Dön</a>
-  <h1>Kullanım Koşulları</h1>
-  <p>Lütfen CentraSAL yazılımlarını (WorkSAL ve QuantSAL, birlikte “Yazılımlar”) kurmadan önce bu koşulları okuyunuz.</p>
+<div id="pb"></div>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ee7ff"/><stop offset="1" stop-color="#0a7dff"/></linearGradient></defs></svg>
+<nav>
+  <a class="brand" href="index.html" aria-label="CentraSAL ana sayfa">
+    <svg viewBox="0 0 64 64" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"><path d="M51.9 15.3A26 26 0 1 0 51.9 48.7"/><path d="M43.5 22.4A15 15 0 1 0 43.5 41.6" transform="rotate(180 32 32)"/><circle cx="32" cy="32" r="3.5" fill="url(#g)" stroke="none"/></svg>
+    CentraSAL
+  </a>
+  <button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlist"><span></span></button>
+  <ul id="navlist"><li><a href="index.html#hakkimizda">Hakkımızda</a></li><li><a href="index.html#vizyon">Vizyon</a></li><li class="dd" id="dd"><button type="button" aria-expanded="false" aria-controls="ddm" id="ddb">Ürünler</button><div class="menu" id="ddm"><a href="worksal.html">WorkSAL</a><a href="quantsal.html">QuantSAL</a></div></li><li><a href="index.html#iletisim">İletişim</a></li></ul>
+</nav>
 
-  <h3>1. Yazılımların Kapsamı ve Sürümleri</h3>
-  <ul>
-    <li><b>WorkSAL:</b> Gelir, gider, hızlı satış ve stok takibi yapan ön muhasebe uygulamasıdır ve tam sürüm olarak sunulmaktadır.</li>
-    <li><b>QuantSAL:</b> CSV / TXT veri dosyaları üzerinde tanımlayıcı istatistik, OLS regresyon ve 2D / 3D grafik oluşturma imkânı sunan istatistik ve ekonometri uygulamasıdır. QuantSAL şu an ilk sürüm (v0.1.0) aşamasındadır; özellikleri geri bildirimlere göre geliştirilmeye devam etmektedir.</li>
-    <li>Yazılımları bu koşullara aykırı biçimde kullanmak, kopyalamak, çoğaltmak, kaynağını değiştirmek veya kullanım sınırlamalarını aşmaya çalışmak yasaktır.</li>
-  </ul>
+<header class="dh">
+  <span class="badge a1">YASAL</span>
+  <h1 class="a2">Kullanım Koşulları</h1>
+  <p class="lead a3">WorkSAL ve QuantSAL’ı kurmadan önce lütfen bu koşulları okuyun. Kurulum ve kullanım, bu koşulları kabul ettiğiniz anlamına gelir.</p>
+  <ul class="dmeta a3"><li>Son güncelleme: 19 Kasım 2026</li><li>Kapsam: WorkSAL ve QuantSAL (v0.5.0)</li></ul>
+</header>
 
-  <h3>2. Veri Güvenliği ve Yedekleme Sorumluluğu</h3>
-  <p>Yazılımlar bulut (cloud) sistemi değildir. Verileriniz yalnızca uygulamayı kurduğunuz bilgisayarda tutulur.</p>
-  <div class="warn">
-    Kullanıcı, veri kayıplarını önlemek amacıyla <b>düzenli olarak yedek almakla</b> ve bu yedekleri harici bir diskte saklamakla yükümlüdür. Bilgisayarın arızalanması, virüs bulaşması veya yazılımsal bir hata sonucu oluşabilecek veri kayıplarından CentraSAL sorumlu tutulamaz. QuantSAL'da analiz ettiğiniz özgün veri dosyalarınızı da ayrıca saklamanız önerilir.
+<main id="icerik">
+<article class="doc">
+  <div class="toc" role="navigation" aria-label="İçindekiler">
+    <h2>İçindekiler</h2>
+    <ol>
+      <li><a href="#kapsam">Kapsam ve tanımlar</a></li><li><a href="#lisans">Lisans ve kullanım hakkı</a></li>
+      <li><a href="#deneme">Deneme ve lisans anahtarı</a></li><li><a href="#kurulum">Kurulum ve sistem</a></li>
+      <li><a href="#yedek">Veri güvenliği ve yedekleme</a></li><li><a href="#worksal">WorkSAL’a özel hükümler</a></li>
+      <li><a href="#quantsal">QuantSAL’a özel hükümler</a></li><li><a href="#guncelleme">Güncellemeler ve geliştirme</a></li>
+      <li><a href="#fikri">Fikri mülkiyet</a></li><li><a href="#geri">Geri bildirim</a></li>
+      <li><a href="#sorumluluk">Garanti reddi ve sorumluluk</a></li><li><a href="#fesih">Fesih</a></li>
+      <li><a href="#hukuk">Uygulanacak hukuk</a></li><li><a href="#iletisim-k">Değişiklik ve iletişim</a></li>
+    </ol>
   </div>
 
-  <h3>3. QuantSAL Sonuçlarının Kullanımı</h3>
-  <ul>
-    <li>QuantSAL'ın ürettiği istatistikler, regresyon sonuçları ve grafikler bilgilendirme ve analiz desteği amacıyla sunulur.</li>
-    <li>Sonuçların doğruluğunu, kullanılan verinin ve modelin uygunluğunu kontrol etmek kullanıcının sorumluluğundadır. Akademik çalışma, yatırım, finansal veya diğer önemli kararlarda yalnızca bu sonuçlara dayanılmamalı, gerektiğinde bağımsız doğrulama ve uzman görüşü alınmalıdır.</li>
-  </ul>
+  <div class="dsec" id="kapsam">
+    <h2><span class="n">01</span>Kapsam ve tanımlar</h2>
+    <p>Bu koşullar, CentraSAL tarafından sunulan <b>WorkSAL</b> ve <b>QuantSAL</b> masaüstü yazılımları (birlikte “Yazılımlar”) ile centrasal.vercel.app web sitesinin kullanımını düzenler. “Siz”, yazılımı kuran ve kullanan kişi veya işletmeyi; “CentraSAL”, yazılımların geliştiricisini ifade eder.</p>
+    <ul>
+      <li><b>WorkSAL:</b> Gelir, gider, hızlı satış, stok, personel ve randevu takibi yapan ön muhasebe uygulamasıdır ve tam sürüm olarak sunulur.</li>
+      <li><b>QuantSAL:</b> CSV / TXT dosyaları üzerinde tanımlayıcı istatistik, OLS regresyon (isteğe bağlı robust HC1 standart hatalarla) ve 2D / 3D grafik oluşturma imkânı sunan istatistik ve ekonometri uygulamasıdır. Şu an <b>v0.5.0</b> sürümündedir; özellikleri geri bildirimlere göre geliştirilmeye devam etmektedir.</li>
+    </ul>
+    <p>Kişisel verilerin işlenmesine ilişkin esaslar <a href="gizlilik.html">Gizlilik Politikası</a>’nda yer alır ve bu koşulların ayrılmaz parçasıdır.</p>
+  </div>
 
-  <h3>4. Geri Bildirim ve Geliştirme</h3>
-  <p>Karşılaştığınız hataları veya önerilerinizi <b>iletisim@centrasal.com</b> adresi üzerinden bize ileterek uygulamaların şekillenmesine katkıda bulunabilirsiniz.</p>
+  <div class="dsec" id="lisans">
+    <h2><span class="n">02</span>Lisans ve kullanım hakkı</h2>
+    <p>CentraSAL size, Yazılımları bu koşullara uygun biçimde kullanmanız için <b>kişisel, münhasır olmayan, devredilemez ve alt lisanslanamaz</b> bir kullanım hakkı verir. Yazılımlar satılmaz; kullanım hakkı lisanslanır.</p>
+    <h3>Yasaklanan kullanımlar</h3>
+    <ul>
+      <li>Yazılımları kopyalamak, çoğaltmak, dağıtmak, kiralamak, yeniden satmak veya başkalarına devretmek,</li>
+      <li>Kaynak kodunu elde etmeye çalışmak, tersine mühendislik yapmak, derlemeyi geri çevirmek veya değiştirmek (yasanın açıkça izin verdiği ölçü hariç),</li>
+      <li>Deneme süresini, lisans anahtarını veya diğer kullanım sınırlamalarını aşmaya, atlatmaya ya da devre dışı bırakmaya çalışmak,</li>
+      <li>Lisans anahtarınızı başka bilgisayarlarda kullanılmak üzere paylaşmak,</li>
+      <li>Yazılımları hukuka aykırı amaçlarla kullanmak.</li>
+    </ul>
+    <p>Bir lisans anahtarı, yalnızca anahtarın oluşturulduğu makine koduna sahip bilgisayarda geçerlidir.</p>
+  </div>
 
-  <h3>5. Sorumluluk Reddi</h3>
-  <p>Yazılımlar "Olduğu Gibi" (AS IS) sunulmaktadır. CentraSAL, uygulamaların kesintisiz veya hatasız çalışacağını garanti etmez. WorkSAL resmi bir mali müşavirlik yazılımı değildir; resmi beyannamelerdeki doğruluk sorumluluğu kullanıcıya aittir. QuantSAL sonuçlarının yorumlanmasından ve bu sonuçlara dayanılarak alınan kararlardan kullanıcı sorumludur.</p>
-</div>
-<script>
-(function(){var r=matchMedia("(prefers-reduced-motion:reduce)").matches;
-document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");
-if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||a.target)return;var u=new URL(a.href,location.href);
-if(u.origin!==location.origin||u.pathname===location.pathname||!/\.html$|\/$/.test(u.pathname))return;
-e.preventDefault();document.body.classList.add("leaving");setTimeout(function(){location.href=u.href},r?0:280)});
-addEventListener("pageshow",function(e){if(e.persisted)document.body.classList.remove("leaving")})})();
-</script>
+  <div class="dsec" id="deneme">
+    <h2><span class="n">03</span>Deneme süresi ve lisans anahtarı</h2>
+    <ul>
+      <li>Yazılımlar, <b>ilk açıldıkları andan itibaren 7 gün</b> boyunca denenebilir.</li>
+      <li>Süre dolduktan sonra devam etmek için bilgisayarınıza özel bir <b>lisans anahtarı</b> gerekir.</li>
+      <li>Anahtar talebi için uygulamada görünen <b>makine kodunu</b> <a href="mailto:keremcentrasal@gmail.com?subject=Lisans%20Talebi">keremcentrasal@gmail.com</a> adresine göndermeniz yeterlidir. Size bilgisayarınıza özel anahtar iletilir.</li>
+      <li>Lisanslamaya ilişkin koşullar ve varsa ücret, anahtar iletilmeden <b>önce</b> size bildirilir.</li>
+      <li>Bilgisayarınızı, işletim sisteminizi veya önemli donanımlarını değiştirirseniz makine kodunuz değişebilir; bu durumda yeni anahtar için bize yazabilirsiniz.</li>
+    </ul>
+    <div class="call">
+      <p>Deneme süresi bittiğinde, girdiğiniz verilere erişmeniz uygulamanın lisans durumuna bağlı olabilir. Bu nedenle önemli kayıtlarınızı <b>dışa aktararak yedekleyin</b> (CSV, PDF vb.).</p>
+    </div>
+  </div>
+
+  <div class="dsec" id="kurulum">
+    <h2><span class="n">04</span>Kurulum ve sistem gereksinimleri</h2>
+    <ul>
+      <li>Yazılımlar <b>Windows 10 ve Windows 11</b> için hazırlanmıştır.</li>
+      <li>Kurulum dosyalarını yalnızca resmî sitemizdeki indirme bağlantılarından edinmenizi öneririz. Başka kaynaklardan indirilen dosyaların güvenliğinden sorumlu değiliz.</li>
+      <li>Yazılımlar henüz <b>kod imzalama sertifikası</b> taşımadığı için Windows kurulumda “Windows bilgisayarınızı korudu” veya “Bilinmeyen yayıncı” uyarısı gösterebilir. Uyarıda <b>Daha fazla bilgi → Yine de çalıştır</b> seçeneğiyle devam edebilirsiniz.</li>
+    </ul>
+  </div>
+
+  <div class="dsec" id="yedek">
+    <h2><span class="n">05</span>Veri güvenliği ve yedekleme sorumluluğu</h2>
+    <p>Yazılımlar bulut sistemi değildir. Verileriniz yalnızca uygulamayı kurduğunuz bilgisayarda tutulur; CentraSAL bu verilere erişemez ve kaybolması hâlinde geri getiremez.</p>
+    <div class="call warn">
+      <p>Kullanıcı, veri kayıplarını önlemek amacıyla <b>düzenli olarak yedek almakla</b> ve bu yedekleri harici bir diskte saklamakla yükümlüdür. Bilgisayarın arızalanması, çalınması, virüs bulaşması, kullanıcı hatası veya yazılımsal bir hata sonucu oluşabilecek veri kayıplarından CentraSAL sorumlu tutulamaz.</p>
+    </div>
+    <ul>
+      <li>WorkSAL, “Belgelerim\WorkSAL Yedek” klasörüne günlük yedek alır; bu yedek de aynı bilgisayarda bulunduğundan <b>tek başına yeterli değildir</b>. Yedekleri düzenli olarak harici bir diske kopyalayın.</li>
+      <li>QuantSAL’da analiz ettiğiniz <b>özgün veri dosyalarınızı</b> ayrıca saklayın; uygulama özgün dosyalarınızı değiştirmeyi amaçlamaz, ancak dosyalarınızın sorumluluğu size aittir.</li>
+    </ul>
+  </div>
+
+  <div class="dsec" id="worksal">
+    <h2><span class="n">06</span>WorkSAL’a özel hükümler</h2>
+    <ul>
+      <li>WorkSAL bir <b>ön muhasebe ve takip aracıdır</b>; resmî mali müşavirlik, defter tutma veya vergi danışmanlığı hizmeti değildir.</li>
+      <li>Resmî beyannameler, vergi ve defter yükümlülükleri ile bunlardaki doğruluk <b>tamamen kullanıcıya aittir</b>. Gerektiğinde mali müşaviriniz veya muhasebecinizle doğrulama yapmanız önerilir.</li>
+      <li>Girdiğiniz stok, fiyat, maliyet ve tutarların doğruluğu sizin sorumluluğunuzdadır; karlılık, marj, kritik stok uyarıları gibi hesaplamalar girdiğiniz verilere dayanır.</li>
+      <li>Personel, vardiya, müşteri ve randevu verilerini girerken ilgili kişisel veri mevzuatına uymak (aydınlatma, hukuki sebep, güvenlik vb.) veri sorumlusu olarak sizin yükümlülüğünüzdür.</li>
+    </ul>
+  </div>
+
+  <div class="dsec" id="quantsal">
+    <h2><span class="n">07</span>QuantSAL’a özel hükümler</h2>
+    <ul>
+      <li>QuantSAL’ın ürettiği istatistikler, regresyon sonuçları ve grafikler <b>bilgilendirme ve analiz desteği</b> amacıyla sunulur.</li>
+      <li>Kullanılan verinin, modelin ve yöntemin (ör. OLS varsayımlarının) uygunluğunu kontrol etmek ve sonuçları doğru yorumlamak sizin sorumluluğunuzdadır.</li>
+      <li>Akademik çalışma, yatırım, finansal veya sağlıkla ilgili önemli kararlarda yalnızca bu sonuçlara dayanılmamalı; gerektiğinde bağımsız doğrulama ve uzman görüşü alınmalıdır.</li>
+      <li>QuantSAL’ın ilk sürümlerinde eksikler veya hatalar bulunabilir. Bulduğunuz hataları bize bildirmeniz çalışmamıza çok yardımcı olur.</li>
+    </ul>
+  </div>
+
+  <div class="dsec" id="guncelleme">
+    <h2><span class="n">08</span>Güncellemeler ve geliştirme</h2>
+    <p>Yazılımlarımız aktif olarak geliştirilmektedir. CentraSAL; özellikleri ekleyebilir, değiştirebilir veya kaldırabilir, hata düzeltmeleri ve yeni sürümler yayımlayabilir. Yeni sürümler otomatik yüklenmeyebilir; güncel sürümü sitemizden indirebilirsiniz. Belirli bir özelliğin ileride de sunulacağı garanti edilmez.</p>
+  </div>
+
+  <div class="dsec" id="fikri">
+    <h2><span class="n">09</span>Fikri mülkiyet</h2>
+    <p>Yazılımların kodu, arayüzü, tasarımı, adı, logosu ve belgeleri ile “CentraSAL”, “WorkSAL” ve “QuantSAL” adları CentraSAL’a aittir ve ilgili mevzuatla korunur. Bu koşullar size bu hakların hiçbirini devretmez. Yazılımlara girdiğiniz veya yüklediğiniz verilerin tüm hakları ise size aittir.</p>
+  </div>
+
+  <div class="dsec" id="geri">
+    <h2><span class="n">10</span>Geri bildirim</h2>
+    <p>Hata, öneri ve fikirlerinizi <a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a> adresinden iletebilirsiniz. Gönderdiğiniz geri bildirimleri, size herhangi bir bedel ödemeden ve kimliğinizi açıklamadan ürünlerimizi geliştirmek için kullanabiliriz. Lütfen geri bildirimlerinize kişisel veya ticari sır niteliğindeki veriler eklemeyin.</p>
+  </div>
+
+  <div class="dsec" id="sorumluluk">
+    <h2><span class="n">11</span>Garanti reddi ve sorumluluk sınırı</h2>
+    <p>Yazılımlar <b>“olduğu gibi”</b> sunulmaktadır. CentraSAL, yazılımların kesintisiz, hatasız, güvenlik açıklarından arınmış veya belirli bir amaca uygun olacağını garanti etmez.</p>
+    <p>Yasanın izin verdiği azami ölçüde CentraSAL; yazılımların kullanımından veya kullanılamamasından doğan dolaylı zararlardan, kâr, gelir, itibar veya veri kaybından, yedek almama veya yanlış veri girişinden, QuantSAL sonuçlarına dayanılarak alınan kararlardan sorumlu tutulamaz. Bu sınırlama, kasıt ve ağır kusurdan doğan sorumluluk ile emredici mevzuatın (tüketici hakları dâhil) sorumluluğu sınırlamaya izin vermediği hâller bakımından uygulanmaz.</p>
+  </div>
+
+  <div class="dsec" id="fesih">
+    <h2><span class="n">12</span>Fesih</h2>
+    <p>Yazılımı dilediğiniz zaman kaldırarak kullanımı sonlandırabilirsiniz. Bu koşulların ihlali hâlinde CentraSAL lisans anahtarını geçersiz kılabilir ve kullanım hakkınızı sona erdirebilir. Fesih hâlinde yazılımı kullanmayı bırakmalı ve kopyalarını silmelisiniz; veri yedeklerinizin saklanması size aittir. Yedekleme, fikri mülkiyet, garanti reddi ve sorumluluk hükümleri fesihten sonra da geçerliliğini korur.</p>
+  </div>
+
+  <div class="dsec" id="hukuk">
+    <h2><span class="n">13</span>Uygulanacak hukuk ve uyuşmazlıklar</h2>
+    <p>Bu koşullara Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda, yürürlükteki mevzuata göre yetkili mahkemeler ve icra daireleri yetkilidir. Tüketici sıfatıyla yaptığınız işlemlerde, tüketici mevzuatından doğan hak ve başvuru yollarınız (Tüketici Hakem Heyetleri ve Tüketici Mahkemeleri dâhil) saklıdır.</p>
+  </div>
+
+  <div class="dsec" id="iletisim-k">
+    <h2><span class="n">14</span>Değişiklikler, bölünebilirlik ve iletişim</h2>
+    <p>CentraSAL bu koşulları güncelleyebilir. Güncel metin bu sayfada yayımlanır; yazılımı kullanmaya devam etmeniz güncellenmiş koşulları kabul ettiğiniz anlamına gelir. Koşulların bir hükmü geçersiz sayılırsa diğer hükümler geçerliliğini korur.</p>
+    <p>Sorularınız için: <a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></p>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="fg">
+    <div class="fb"><b>CentraSAL</b><p>İşletmeler için sade, çevrimdışı çalışan yazılımlar geliştiriyoruz.</p></div>
+    <div><h4>Ürünler</h4><a href="worksal.html">WorkSAL</a><a href="quantsal.html">QuantSAL</a><a href="worksal.html#indir">WorkSAL’ı indir</a><a href="quantsal.html#indir">QuantSAL’ı indir</a></div>
+    <div><h4>Kurumsal</h4><a href="index.html#hakkimizda">Hakkımızda</a><a href="index.html#vizyon">Vizyon ve misyon</a><a href="gizlilik.html">Gizlilik Politikası</a><a href="kosullar.html">Kullanım Koşulları</a></div>
+    <div><h4>İletişim</h4><a href="mailto:keremcentrasal@gmail.com">keremcentrasal@gmail.com</a></div>
+  </div>
+  <div class="fc"><span>&copy; 2026 CentraSAL. Tüm hakları saklıdır.</span><span>WorkSAL · QuantSAL</span></div>
+</footer>
+<button id="up" type="button" aria-label="Sayfa başına dön">↑</button>
+<script src="site.js"></script>
 </body>
 </html>
